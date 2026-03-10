@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Francisco Caro | Desarrollo Web Profesional</title>
   
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+  <!-- Favicon con maletín 💼 -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💼</text></svg>" />
+  
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -13,23 +15,18 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
   <style>
-    /* PALETA DE ALTO CONTRASTE - WCAG AAA Compliant */
+    /* PALETA DE ALTO CONTRASTE */
     :root {
-      --bg-dark: #0a0a0a;        /* Negro casi puro para fondos oscuros */
-      --bg-light: #ffffff;       /* Blanco puro para fondos claros */
-      --bg-gray: #f5f5f5;        /* Gris muy claro para secciones alternas */
-      
-      --text-dark: #000000;      /* Negro puro para texto sobre fondo claro */
-      --text-light: #ffffff;     /* Blanco puro para texto sobre fondo oscuro */
-      --text-muted-dark: #374151; /* Gris oscuro para texto secundario (fondo claro) */
-      --text-muted-light: #d1d5db; /* Gris claro para texto secundario (fondo oscuro) */
-      
-      --accent: #f97316;         /* Naranja brillante para acentos */
-      --accent-dark: #ea580c;    /* Naranja oscuro para hover */
-      --accent-light: #fb923c;   /* Naranja claro */
-      
-      --border-light: #e5e7eb;   /* Bordes sutiles */
-      --border-dark: #374151;    /* Bordes en modo oscuro */
+      --bg-dark: #0a0a0a;
+      --bg-light: #ffffff;
+      --bg-gray: #f5f5f5;
+      --text-dark: #000000;
+      --text-light: #ffffff;
+      --text-muted-dark: #374151;
+      --text-muted-light: #d1d5db;
+      --accent: #f97316;
+      --accent-dark: #ea580c;
+      --border-light: #e5e7eb;
     }
     
     body { 
@@ -41,7 +38,6 @@
     
     .display { font-family: 'Space Grotesk', sans-serif; }
     
-    /* HERO - Fondo oscuro, texto claro (MÁXIMO CONTRASTE) */
     .hero-section {
       background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
       min-height: 100vh;
@@ -51,27 +47,19 @@
       color: #ffffff;
       font-weight: 800;
       line-height: 1.1;
-      letter-spacing: -0.02em;
     }
     
     .hero-subtitle {
-      color: #e5e7eb; /* Gris muy claro, alto contraste sobre negro */
+      color: #e5e7eb;
       font-size: 1.5rem;
       line-height: 1.6;
-      font-weight: 400;
     }
     
-    .hero-text {
-      color: #d1d5db; /* Gris claro para texto secundario */
-    }
-    
-    /* Texto acentuado - Naranja brillante sobre fondo oscuro */
     .text-accent {
       color: #f97316;
       font-weight: 700;
     }
     
-    /* Botón primario - Alto contraste */
     .btn-primary {
       background: #f97316;
       color: #000000;
@@ -88,10 +76,8 @@
     .btn-primary:hover {
       background: #fb923c;
       transform: translateY(-2px);
-      box-shadow: 0 8px 30px rgba(249, 115, 22, 0.4);
     }
     
-    /* Botón secundario sobre fondo oscuro */
     .btn-secondary-dark {
       background: transparent;
       color: #ffffff;
@@ -104,42 +90,18 @@
     
     .btn-secondary-dark:hover {
       background: rgba(249, 115, 22, 0.1);
-      color: #f97316;
     }
     
-    /* Secciones claras - Fondo blanco, texto negro */
     .section-light {
       background: #ffffff;
       color: #000000;
     }
     
-    .section-light h2,
-    .section-light h3 {
-      color: #000000;
-      font-weight: 800;
-    }
-    
-    .section-light p {
-      color: #374151; /* Gris oscuro, alto contraste sobre blanco */
-    }
-    
-    /* Secciones grises - Fondo gris claro, texto negro */
     .section-gray {
       background: #f5f5f5;
       color: #000000;
     }
     
-    .section-gray h2,
-    .section-gray h3 {
-      color: #000000;
-      font-weight: 800;
-    }
-    
-    .section-gray p {
-      color: #374151;
-    }
-    
-    /* Tarjetas - Fondo blanco, borde sutil, texto negro */
     .card {
       background: #ffffff;
       border: 1px solid #e5e7eb;
@@ -163,26 +125,24 @@
     }
     
     .card p {
-      color: #4b5563; /* Gris oscuro para mejor lectura */
+      color: #4b5563;
       line-height: 1.6;
     }
     
-    /* Iconos en tarjetas - Fondo naranja muy claro */
     .icon-box {
       width: 60px;
       height: 60px;
-      background: #fff7ed; /* Naranja muy muy claro */
+      background: #fff7ed;
       border: 1px solid #fed7aa;
       border-radius: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #ea580c; /* Naranja oscuro para contraste */
+      color: #ea580c;
       font-size: 1.5rem;
       margin-bottom: 1.5rem;
     }
     
-    /* Precios - Números grandes y negros */
     .price-number {
       color: #000000;
       font-size: 3rem;
@@ -196,17 +156,34 @@
       font-weight: 500;
     }
     
-    /* Plan destacado */
+    /* PLAN DESTACADO - Fondo negro con borde naranja */
     .plan-featured {
       background: #000000;
       border: 2px solid #f97316;
+      border-radius: 16px;
+      padding: 2rem;
       position: relative;
       overflow: hidden;
+      transform: translateY(-8px);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.3);
     }
     
-    .plan-featured .price-number,
-    .plan-featured h4,
-    .plan-featured li {
+    .plan-featured::before {
+      content: 'RECOMENDADO';
+      position: absolute;
+      top: 20px;
+      right: -35px;
+      background: #f97316;
+      color: #000000;
+      padding: 6px 40px;
+      font-size: 10px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transform: rotate(45deg);
+    }
+    
+    .plan-featured .price-number {
       color: #ffffff;
     }
     
@@ -214,18 +191,38 @@
       color: #9ca3af;
     }
     
-    /* Lista de features - Check verde oscuro para contraste */
+    .plan-featured h4 {
+      color: #f97316;
+      font-weight: 700;
+      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
+    }
+    
+    .plan-featured p {
+      color: #d1d5db;
+      margin-bottom: 1.5rem;
+    }
+    
+    .feature-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 2rem 0;
+    }
+    
     .feature-list li {
       display: flex;
       align-items: center;
       gap: 0.75rem;
       margin-bottom: 0.75rem;
-      color: #374151;
       font-size: 0.95rem;
     }
     
-    .feature-list i {
-      color: #059669; /* Verde oscuro para contraste sobre blanco */
+    .card .feature-list li {
+      color: #374151;
+    }
+    
+    .card .feature-list i {
+      color: #059669;
       font-size: 1rem;
     }
     
@@ -234,10 +231,9 @@
     }
     
     .plan-featured .feature-list i {
-      color: #f97316; /* Naranja sobre fondo negro */
+      color: #f97316;
     }
     
-    /* Navbar */
     .navbar {
       position: fixed;
       width: 100%;
@@ -257,10 +253,6 @@
       color: #000000;
     }
     
-    .navbar-scrolled .nav-link:hover {
-      color: #f97316;
-    }
-    
     .nav-link {
       color: #ffffff;
       font-weight: 500;
@@ -271,7 +263,6 @@
       color: #f97316;
     }
     
-    /* Footer - Fondo oscuro, texto claro */
     .footer {
       background: #000000;
       color: #d1d5db;
@@ -281,6 +272,9 @@
       color: #ffffff;
       font-weight: 700;
       margin-bottom: 1rem;
+      font-size: 0.875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
     }
     
     .footer a {
@@ -292,7 +286,6 @@
       color: #f97316;
     }
     
-    /* Modal */
     .modal-overlay {
       display: none;
       position: fixed;
@@ -333,7 +326,6 @@
       line-height: 1.6;
     }
     
-    /* Typing effect */
     .typing::after {
       content: '|';
       animation: blink 1s infinite;
@@ -345,7 +337,6 @@
       51%, 100% { opacity: 0; }
     }
     
-    /* Stats */
     .stat-number {
       font-size: 2.5rem;
       font-weight: 900;
@@ -360,7 +351,6 @@
       font-weight: 600;
     }
     
-    /* Proceso steps */
     .step-number {
       width: 60px;
       height: 60px;
@@ -375,7 +365,6 @@
       margin: 0 auto 1rem;
     }
     
-    /* FAQ */
     details {
       background: #ffffff;
       border: 1px solid #e5e7eb;
@@ -414,7 +403,6 @@
       line-height: 1.7;
     }
     
-    /* CTA Section */
     .cta-section {
       background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
     }
@@ -431,7 +419,6 @@
       font-size: 1.25rem;
     }
     
-    /* Mobile menu */
     .mobile-menu {
       display: none;
       background: #ffffff;
@@ -452,10 +439,6 @@
       color: #000000;
       font-weight: 500;
       border-bottom: 1px solid #f3f4f6;
-    }
-    
-    .mobile-menu a:last-child {
-      border-bottom: none;
     }
   </style>
 </head>
@@ -489,7 +472,6 @@
       </button>
     </div>
     
-    <!-- Mobile Menu -->
     <div class="mobile-menu md:hidden" id="mobile-menu">
       <a href="#servicios">Servicios</a>
       <a href="#portfolio">Portfolio</a>
@@ -611,8 +593,8 @@
   <section id="servicios" class="section-gray py-24">
     <div class="max-w-7xl mx-auto px-6">
       <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl mb-4">¿Qué incluye?</h2>
-        <p class="text-xl max-w-2xl mx-auto">Todo lo que necesitás para tener presencia online profesional y empezar a recibir reservas.</p>
+        <h2 class="text-4xl md:text-5xl font-bold mb-4">¿Qué incluye?</h2>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">Todo lo que necesitás para tener presencia online profesional y empezar a recibir reservas.</p>
       </div>
       
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -671,12 +653,11 @@
   <section id="portfolio" class="section-light py-24">
     <div class="max-w-7xl mx-auto px-6">
       <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl mb-4">Trabajos Recientes</h2>
-        <p class="text-xl max-w-2xl mx-auto">Algunos ejemplos de sitios entregados con sistema de reservas integrado.</p>
+        <h2 class="text-4xl md:text-5xl font-bold mb-4">Trabajos Recientes</h2>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">Algunos ejemplos de sitios entregados con sistema de reservas integrado.</p>
       </div>
       
       <div class="grid md:grid-cols-3 gap-8">
-        <!-- Proyecto 1 -->
         <div class="cursor-pointer group" onclick="openModal('psicologia')">
           <div class="aspect-[4/3] bg-gradient-to-br from-orange-50 to-orange-100 rounded-2xl flex items-center justify-center mb-4 border border-orange-200 group-hover:border-orange-400 transition">
             <div class="text-center p-6">
@@ -691,7 +672,6 @@
           <p class="text-gray-600 text-sm">Calendario con disponibilidad virtual y presencial</p>
         </div>
         
-        <!-- Proyecto 2 -->
         <div class="cursor-pointer group" onclick="openModal('medico')">
           <div class="aspect-[4/3] bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl flex items-center justify-center mb-4 border border-blue-200 group-hover:border-blue-400 transition">
             <div class="text-center p-6">
@@ -706,7 +686,6 @@
           <p class="text-gray-600 text-sm">Reservas por especialidad y recordatorios</p>
         </div>
         
-        <!-- Proyecto 3 -->
         <div class="cursor-pointer group" onclick="openModal('barberia')">
           <div class="aspect-[4/3] bg-gradient-to-br from-yellow-50 to-yellow-100 rounded-2xl flex items-center justify-center mb-4 border border-yellow-200 group-hover:border-yellow-400 transition">
             <div class="text-center p-6">
@@ -748,12 +727,12 @@
     </div>
   </div>
 
-  <!-- PRECIOS -->
+  <!-- PRECIOS - CORREGIDO CON 3 PLANES -->
   <section id="precios" class="section-gray py-24">
     <div class="max-w-7xl mx-auto px-6">
       <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl mb-4">Inversión</h2>
-        <p class="text-xl max-w-2xl mx-auto">Precios transparentes. Sin costos ocultos.</p>
+        <h2 class="text-4xl md:text-5xl font-bold mb-4">Inversión</h2>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">Precios transparentes. Sin costos ocultos.</p>
         <p class="text-sm text-gray-500 mt-2">Cotización referencial: $1,415 ARS/USD</p>
         
         <div class="flex justify-center mt-8">
@@ -764,8 +743,10 @@
         </div>
       </div>
       
-      <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-        <!-- Plan Básico -->
+      <!-- LOS 3 PLANES -->
+      <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto items-start">
+        
+        <!-- PLAN 1: BÁSICO -->
         <div class="card">
           <div class="mb-6">
             <h4 class="text-gray-500 text-xs font-bold uppercase tracking-wider mb-2">Landing Page</h4>
@@ -779,13 +760,14 @@
             </div>
           </div>
           
-          <p class="text-gray-600 mb-6">Página única profesional con información de tu negocio.</p>
+          <p class="text-gray-600 mb-6 text-sm">Página única profesional con información de tu negocio.</p>
           
           <ul class="feature-list mb-8">
             <li><i class="fas fa-check"></i><span>Diseño personalizado único</span></li>
             <li><i class="fas fa-check"></i><span>Responsive mobile-first</span></li>
             <li><i class="fas fa-check"></i><span>Formulario de contacto</span></li>
             <li><i class="fas fa-check"></i><span>Hosting accesible</span></li>
+            <li><i class="fas fa-times text-red-400"></i><span class="text-gray-400">Sistema de turnos</span></li>
           </ul>
           
           <a href="https://wa.me/5492604323056?text=Hola!%20Me%20interesa%20el%20Plan%20Landing%20Page" target="_blank" 
@@ -794,10 +776,10 @@
           </a>
         </div>
         
-        <!-- Plan Profesional -->
-        <div class="plan-featured rounded-2xl p-8 transform md:-translate-y-4 shadow-2xl">
+        <!-- PLAN 2: PROFESIONAL (DESTACADO) -->
+        <div class="plan-featured">
           <div class="mb-6">
-            <h4 class="text-orange-400 text-xs font-bold uppercase tracking-wider mb-2">Con Turnos</h4>
+            <h4>Con Turnos</h4>
             <div class="price-ars">
               <span class="price-number">$210.000</span>
               <span class="price-currency"> ARS</span>
@@ -808,13 +790,14 @@
             </div>
           </div>
           
-          <p class="text-gray-300 mb-6">Sitio completo con sistema de reservas. Ideal para profesionales.</p>
+          <p class="text-sm">Sitio completo con sistema de reservas. Ideal para profesionales y consultorios.</p>
           
           <ul class="feature-list mb-8">
             <li><i class="fas fa-check"></i><span>Todo del plan anterior</span></li>
             <li><i class="fas fa-check"></i><span class="text-orange-400 font-semibold">Sistema de turnos completo</span></li>
             <li><i class="fas fa-check"></i><span>Panel de administración</span></li>
-            <li><i class="fas fa-check"></i><span>Notificaciones email</span></li>
+            <li><i class="fas fa-check"></i><span>Múltiples secciones</span></li>
+            <li><i class="fas fa-check"></i><span>Notificaciones por email</span></li>
           </ul>
           
           <a href="https://wa.me/5492604323056?text=Hola!%20Me%20interesa%20el%20Plan%20Con%20Turnos" target="_blank" 
@@ -823,7 +806,7 @@
           </a>
         </div>
         
-        <!-- Plan Premium -->
+        <!-- PLAN 3: PREMIUM -->
         <div class="card">
           <div class="mb-6">
             <h4 class="text-gray-500 text-xs font-bold uppercase tracking-wider mb-2">Premium</h4>
@@ -837,13 +820,14 @@
             </div>
           </div>
           
-          <p class="text-gray-600 mb-6">Funcionalidades avanzadas y múltiples profesionales.</p>
+          <p class="text-gray-600 mb-6 text-sm">Funcionalidades avanzadas y múltiples profesionales.</p>
           
           <ul class="feature-list mb-8">
             <li><i class="fas fa-check"></i><span>Todo del plan Con Turnos</span></li>
             <li><i class="fas fa-check"></i><span>Múltiples profesionales</span></li>
             <li><i class="fas fa-check"></i><span>Pagos online integrados</span></li>
             <li><i class="fas fa-check"></i><span>WhatsApp API</span></li>
+            <li><i class="fas fa-check"></i><span>Soporte prioritario 6 meses</span></li>
           </ul>
           
           <a href="https://wa.me/5492604323056?text=Hola!%20Me%20interesa%20el%20Plan%20Premium" target="_blank" 
@@ -851,8 +835,10 @@
             Consultar
           </a>
         </div>
+        
       </div>
       
+      <!-- SOPORTE -->
       <div class="text-center mt-12 p-6 bg-white rounded-2xl max-w-2xl mx-auto border border-gray-200">
         <div class="flex items-center justify-center gap-2 mb-2">
           <i class="fas fa-headset text-orange-500"></i>
@@ -870,8 +856,8 @@
   <section class="section-light py-24">
     <div class="max-w-6xl mx-auto px-6">
       <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl mb-4">¿Cómo trabajamos?</h2>
-        <p class="text-xl max-w-2xl mx-auto">Proceso simple y transparente. De tu idea a la web en línea en 7 días.</p>
+        <h2 class="text-4xl md:text-5xl font-bold mb-4">¿Cómo trabajamos?</h2>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">Proceso simple y transparente. De tu idea a la web en línea en 7 días.</p>
       </div>
       
       <div class="grid md:grid-cols-4 gap-8">
@@ -903,8 +889,8 @@
   <section id="faq" class="section-gray py-24">
     <div class="max-w-3xl mx-auto px-6">
       <div class="text-center mb-16">
-        <h2 class="text-4xl mb-4">Preguntas Frecuentes</h2>
-        <p class="text-xl">Todo lo que necesitás saber antes de empezar.</p>
+        <h2 class="text-4xl font-bold mb-4">Preguntas Frecuentes</h2>
+        <p class="text-xl text-gray-600">Todo lo que necesitás saber antes de empezar.</p>
       </div>
       
       <details>
@@ -1191,26 +1177,9 @@
       }
     }
     
-    // Close modal on Escape
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') closeModal();
     });
-    
-    // GSAP
-    if (typeof gsap !== 'undefined') {
-      gsap.registerPlugin(ScrollTrigger);
-      
-      gsap.from('.card', {
-        scrollTrigger: {
-          trigger: '#servicios',
-          start: 'top 80%'
-        },
-        y: 50,
-        opacity: 0,
-        duration: 0.6,
-        stagger: 0.1
-      });
-    }
   </script>
 
 </body>
