@@ -7,12 +7,14 @@
   
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💼</text></svg>" />
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+    
     body { 
       font-family: 'Inter', sans-serif; 
       background-color: #ffffff;
@@ -21,6 +23,12 @@
     }
     
     .display { font-family: 'Space Grotesk', sans-serif; }
+    
+    /* Nueva fuente elegante para títulos */
+    .elegant-title {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+    }
     
     /* FONDO BLANCO SIMPLE CON TOQUE DORADO MUY SUTIL */
     .section-white {
@@ -39,7 +47,6 @@
     
     .hero-title {
       color: #ffffff;
-      font-weight: 800;
       line-height: 1.1;
     }
     
@@ -304,6 +311,7 @@
     }
     .mobile-menu.active { display: block; }
   </style>
+<base target="_blank">
 </head>
 <body>
 
@@ -355,7 +363,7 @@
             Disponible para proyectos
           </div>
           
-          <h1 class="hero-title text-5xl md:text-7xl">
+          <h1 class="hero-title text-5xl md:text-7xl elegant-title">
             Sitios web que <br>
             <span class="text-orange-500 typing" id="typing-text">venden</span>
           </h1>
@@ -453,7 +461,7 @@
   <section id="servicios" class="section-white py-24">
     <div class="max-w-7xl mx-auto px-6">
       <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl font-bold mb-4">¿Qué incluye?</h2>
+        <h2 class="text-4xl md:text-5xl font-bold mb-4 elegant-title">¿Qué incluye?</h2>
         <p class="text-xl text-gray-600 max-w-2xl mx-auto">Todo lo que necesitás para tener presencia online profesional y empezar a recibir reservas.</p>
       </div>
       
@@ -501,7 +509,7 @@
   <section id="portfolio" class="section-light py-24">
     <div class="max-w-7xl mx-auto px-6">
       <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl font-bold mb-4">Trabajos Recientes</h2>
+        <h2 class="text-4xl md:text-5xl font-bold mb-4 elegant-title">Trabajos Recientes</h2>
         <p class="text-xl text-gray-600 max-w-2xl mx-auto">Algunos ejemplos de sitios entregados con sistema de reservas integrado.</p>
       </div>
       
@@ -572,7 +580,7 @@
   <section id="precios" class="section-white py-24">
     <div class="max-w-7xl mx-auto px-6">
       <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl font-bold mb-4">Inversión</h2>
+        <h2 class="text-4xl md:text-5xl font-bold mb-4 elegant-title">Inversión</h2>
         <p class="text-xl text-gray-600 max-w-2xl mx-auto">Precios transparentes. Sin costos ocultos.</p>
         <p class="text-sm text-gray-500 mt-2">Cotización referencial: $1,415 ARS/USD</p>
         
@@ -694,7 +702,7 @@
   <section class="section-light py-24">
     <div class="max-w-6xl mx-auto px-6">
       <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl font-bold mb-4">¿Cómo trabajamos?</h2>
+        <h2 class="text-4xl md:text-5xl font-bold mb-4 elegant-title">¿Cómo trabajamos?</h2>
         <p class="text-xl text-gray-600 max-w-2xl mx-auto">Proceso simple y transparente. De tu idea a la web en línea en 7 días.</p>
       </div>
       
@@ -727,7 +735,7 @@
   <section id="faq" class="section-white py-24">
     <div class="max-w-3xl mx-auto px-6">
       <div class="text-center mb-16">
-        <h2 class="text-4xl font-bold mb-4">Preguntas Frecuentes</h2>
+        <h2 class="text-4xl font-bold mb-4 elegant-title">Preguntas Frecuentes</h2>
         <p class="text-xl text-gray-600">Todo lo que necesitás saber antes de empezar.</p>
       </div>
       
@@ -776,7 +784,7 @@
   <!-- CTA -->
   <section class="cta-section py-24">
     <div class="max-w-4xl mx-auto px-6 text-center">
-      <h2 class="text-4xl md:text-5xl font-bold mb-6 text-white">¿Listo para tu nueva web?</h2>
+      <h2 class="text-4xl md:text-5xl font-bold mb-6 text-white elegant-title">¿Listo para tu nueva web?</h2>
       <p class="text-xl text-gray-300 mb-10">Agendá una consulta gratuita de 15 minutos. Sin compromiso, te explico cómo podemos llevar tu negocio al siguiente nivel.</p>
       
       <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
