@@ -479,6 +479,219 @@
       font-size: 0.875rem;
       font-weight: 500;
     }
+    
+    /* EFECTOS SUTILES */
+    
+    /* Partículas flotantes en hero */
+    .particles {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      pointer-events: none;
+    }
+    
+    .particle {
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      background: rgba(249, 115, 22, 0.3);
+      border-radius: 50%;
+      animation: float 15s infinite;
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+      10% { opacity: 1; }
+      90% { opacity: 1; }
+      100% { transform: translateY(-100vh) rotate(720deg); opacity: 0; }
+    }
+    
+    /* Brillo sutil en cards al hover */
+    .card::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(249, 115, 22, 0.1), transparent);
+      transition: left 0.5s ease;
+      pointer-events: none;
+    }
+    
+    .card:hover::after {
+      left: 100%;
+    }
+    
+    /* Animación de entrada suave */
+    .fade-in-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .fade-in-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    /* Efecto de pulso sutil en elementos destacados */
+    .pulse-soft {
+      animation: pulseSoft 3s ease-in-out infinite;
+    }
+    
+    @keyframes pulseSoft {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(249, 115, 22, 0.2); }
+      50% { box-shadow: 0 0 20px 5px rgba(249, 115, 22, 0.1); }
+    }
+    
+    /* Gradient shift sutil en hero */
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(ellipse at 20% 50%, rgba(249, 115, 22, 0.08) 0%, transparent 50%),
+                  radial-gradient(ellipse at 80% 50%, rgba(251, 146, 60, 0.05) 0%, transparent 50%);
+      animation: gradientShift 10s ease-in-out infinite;
+      pointer-events: none;
+    }
+    
+    @keyframes gradientShift {
+      0%, 100% { opacity: 0.5; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.1); }
+    }
+    
+    /* Efecto de onda sutil en botones */
+    .btn-primary {
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .btn-primary::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      transition: width 0.6s ease, height 0.6s ease;
+    }
+    
+    .btn-primary:active::before {
+      width: 300px;
+      height: 300px;
+    }
+    
+    /* Efecto de borde brillante sutil */
+    .glow-border {
+      position: relative;
+    }
+    
+    .glow-border::before {
+      content: '';
+      position: absolute;
+      inset: -2px;
+      background: linear-gradient(45deg, transparent, rgba(249, 115, 22, 0.3), transparent);
+      border-radius: inherit;
+      z-index: -1;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    
+    .glow-border:hover::before {
+      opacity: 1;
+      animation: rotate 3s linear infinite;
+    }
+    
+    @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    
+    /* Stagger delay para animaciones */
+    .stagger-1 { transition-delay: 0.1s; }
+    .stagger-2 { transition-delay: 0.2s; }
+    .stagger-3 { transition-delay: 0.3s; }
+    .stagger-4 { transition-delay: 0.4s; }
+    .stagger-5 { transition-delay: 0.5s; }
+    .stagger-6 { transition-delay: 0.6s; }
+    
+    /* Efecto de escala suave en imágenes/portfolio */
+    .portfolio-card .preview {
+      overflow: hidden;
+    }
+    
+    .portfolio-card:hover .preview > div:first-child {
+      transform: scale(1.05);
+      transition: transform 0.5s ease;
+    }
+    
+    /* Sombra flotante sutil */
+    .float-shadow {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .float-shadow:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    }
+    
+    /* Efecto de typing cursor mejorado */
+    .typing::after {
+      content: '|';
+      animation: blink 1s infinite, glow 2s ease-in-out infinite;
+      color: #f97316;
+      text-shadow: 0 0 10px rgba(249, 115, 22, 0.5);
+    }
+    
+    @keyframes glow {
+      0%, 100% { text-shadow: 0 0 5px rgba(249, 115, 22, 0.5); }
+      50% { text-shadow: 0 0 20px rgba(249, 115, 22, 0.8), 0 0 30px rgba(249, 115, 22, 0.4); }
+    }
+    
+    /* Efecto de número contador */
+    .stat-number {
+      background: linear-gradient(135deg, #000 0%, #333 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      position: relative;
+    }
+    
+    .stat-number::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #f97316, transparent);
+      transition: width 0.5s ease;
+    }
+    
+    .stat-number.visible::after {
+      width: 60%;
+    }
+    
+    /* Línea decorativa animada */
+    .animated-line {
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #f97316, transparent);
+      width: 0;
+      transition: width 1s ease;
+    }
+    
+    .animated-line.visible {
+      width: 100%;
+    }
   </style>
 </head>
 <body>
@@ -548,10 +761,12 @@
   </nav>
 
   <!-- HERO -->
-  <section class="hero-section flex items-center pt-32 pb-20">
+  <section class="hero-section flex items-center pt-32 pb-20 relative overflow-hidden">
+    <!-- Partículas flotantes sutiles -->
+    <div class="particles" id="particles"></div>
     <div class="max-w-7xl mx-auto px-6 w-full">
       <div class="grid lg:grid-cols-2 gap-16 items-center">
-        <div class="space-y-8">
+        <div class="space-y-8 fade-in-up">
           <div class="space-y-3">
             <div class="flex items-center gap-4 md:gap-5">
               <svg viewBox="0 0 48 48" fill="none" class="w-16 h-16 md:w-20 md:h-20 drop-shadow-2xl">
@@ -625,7 +840,7 @@
           </div>
         </div>
         
-        <div class="hidden lg:block relative">
+        <div class="hidden lg:block relative fade-in-up stagger-2">
           <div class="absolute -inset-4 bg-orange-500/20 rounded-3xl blur-3xl"></div>
           <div class="relative bg-gray-900 rounded-2xl p-6 border border-gray-700">
             <div class="flex items-center gap-2 mb-4">
@@ -654,19 +869,19 @@
   <section class="py-12 section-light border-y border-gray-100">
     <div class="max-w-7xl mx-auto px-6">
       <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-        <div>
+        <div class="fade-in-up stagger-1">
           <div class="stat-number">50+</div>
           <div class="text-gray-500 text-sm uppercase font-semibold">Proyectos entregados</div>
         </div>
-        <div>
+        <div class="fade-in-up stagger-2">
           <div class="stat-number">100%</div>
           <div class="text-gray-500 text-sm uppercase font-semibold">Clientes satisfechos</div>
         </div>
-        <div>
+        <div class="fade-in-up stagger-3">
           <div class="stat-number">7</div>
           <div class="text-gray-500 text-sm uppercase font-semibold">Días de entrega</div>
         </div>
-        <div>
+        <div class="fade-in-up stagger-4">
           <div class="stat-number">24/7</div>
           <div class="text-gray-500 text-sm uppercase font-semibold">Soporte accesible</div>
         </div>
@@ -683,37 +898,37 @@
       </div>
       
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="card">
+        <div class="card fade-in-up stagger-1 glow-border">
           <div class="icon-box"><i class="fas fa-paint-brush"></i></div>
           <h4 class="font-bold text-lg mb-2">Diseño Único</h4>
           <p class="text-gray-600">Diseño personalizado según tu marca. No uso plantillas genéricas. Cada sitio es único y memorable.</p>
         </div>
         
-        <div class="card">
+        <div class="card fade-in-up stagger-2 glow-border">
           <div class="icon-box"><i class="fas fa-calendar-check"></i></div>
           <h4 class="font-bold text-lg mb-2">Sistema de Turnos</h4>
           <p class="text-gray-600">Calendario interactivo donde tus clientes reservan directo. Notificaciones automáticas por email.</p>
         </div>
         
-        <div class="card">
+        <div class="card fade-in-up stagger-3 glow-border">
           <div class="icon-box"><i class="fas fa-mobile-alt"></i></div>
           <h4 class="font-bold text-lg mb-2">100% Responsive</h4>
           <p class="text-gray-600">Se ve perfecto en celulares, tablets y computadoras. Tus clientes pueden reservar desde cualquier lado.</p>
         </div>
         
-        <div class="card">
+        <div class="card fade-in-up stagger-4 glow-border">
           <div class="icon-box"><i class="fas fa-lock"></i></div>
           <h4 class="font-bold text-lg mb-2">Panel de Admin</h4>
           <p class="text-gray-600">Gestioná tus turnos, disponibilidad y datos de clientes desde un panel privado con contraseña.</p>
         </div>
         
-        <div class="card">
+        <div class="card fade-in-up stagger-5 glow-border">
           <div class="icon-box"><i class="fas fa-rocket"></i></div>
           <h4 class="font-bold text-lg mb-2">Hosting Accesible</h4>
           <p class="text-gray-600">Precio accesible según la necesidad del cliente. Dominio personalizado opcional.</p>
         </div>
         
-        <div class="card">
+        <div class="card fade-in-up stagger-6 glow-border">
           <div class="icon-box"><i class="fas fa-headset"></i></div>
           <h4 class="font-bold text-lg mb-2">Soporte Garantizado</h4>
           <p class="text-gray-600">30 días de soporte post-entrega para ajustes. Después, soporte mensual accesible.</p>
@@ -773,7 +988,7 @@
         <div class="benefit-card">
           <div class="benefit-icon"><i class="fas fa-award"></i></div>
           <h4 class="text-xl font-bold text-gray-900 mb-3">Generá confianza al instante</h4>
-          <p class="text-gray-600 mb-4">El 75% de los pacientes/eliges investigan online antes de elegir. Sin web, no existís. Con una web profesional, transmitís seriedad desde el primer contacto.</p>
+          <p class="text-gray-600 mb-4">El 75% de los pacientes/clientes investigan online antes de elegir. Sin web, no existís. Con una web profesional, transmitís seriedad desde el primer contacto.</p>
           <div class="savings-badge">
             <i class="fas fa-star mr-1"></i>
             3x más conversiones
@@ -1335,6 +1550,79 @@
   </footer>
 
   <script>
+    // Crear partículas sutiles en el hero
+    function createParticles() {
+      const container = document.getElementById('particles');
+      if (!container) return;
+      
+      const particleCount = 25;
+      
+      for (let i = 0; i < particleCount; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        particle.style.left = Math.random() * 100 + '%';
+        particle.style.animationDelay = Math.random() * 15 + 's';
+        particle.style.animationDuration = (10 + Math.random() * 10) + 's';
+        particle.style.opacity = 0.2 + Math.random() * 0.3;
+        
+        // Algunas partículas más grandes pero muy transparentes
+        if (Math.random() > 0.8) {
+          particle.style.width = '6px';
+          particle.style.height = '6px';
+        }
+        
+        container.appendChild(particle);
+      }
+    }
+    
+    // Animación de elementos al hacer scroll
+    function setupScrollAnimations() {
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+      };
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            
+            // Animar líneas decorativas si existen
+            const lines = entry.target.querySelectorAll('.animated-line');
+            lines.forEach(line => line.classList.add('visible'));
+          }
+        });
+      }, observerOptions);
+      
+      // Observar elementos con clase fade-in-up
+      document.querySelectorAll('.fade-in-up, .stat-number').forEach(el => {
+        observer.observe(el);
+      });
+    }
+    
+    // Efecto de parallax muy sutil en hero
+    function setupParallax() {
+      const hero = document.querySelector('.hero-section');
+      if (!hero) return;
+      
+      window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
+        const rate = scrolled * 0.3;
+        
+        if (scrolled < window.innerHeight) {
+          hero.style.backgroundPosition = `center ${rate}px`;
+        }
+      }, { passive: true });
+    }
+    
+    // Inicializar todo
+    document.addEventListener('DOMContentLoaded', () => {
+      createParticles();
+      setupScrollAnimations();
+      setupParallax();
+    });
+    
     // Navbar scroll
     window.addEventListener('scroll', () => {
       const navbar = document.getElementById('navbar');
