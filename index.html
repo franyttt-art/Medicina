@@ -1,14 +1,88 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Zafiro Web | Diseños de Páginas Web</title>
   
-  <meta name="description" content="Desarrollo de sitios web profesionales con sistema de turnos integrado. Diseños únicos que convierten visitantes en clientes. Mendoza, Argentina.">
-  <meta name="keywords" content="desarrollo web, sistema de turnos, paginas web, mendoza, argentina, diseño web">
+  <!-- SEO Optimizado -->
+  <title>Diseño Web Mendoza | ZafiroWeb - Páginas Profesionales</title>
+  <meta name="description" content="Creamos páginas web profesionales en Mendoza. Tiendas online, sistemas de turnos, portfolios. Entrega en 7 días. ¡Consultá gratis!">
+  <meta name="keywords" content="diseño web mendoza, desarrollo web, sistema de turnos, paginas web profesionales, tiendas online, argentina">
+  <meta name="author" content="ZafiroWeb">
+  <meta name="robots" content="index, follow">
   
+  <!-- Open Graph -->
+  <meta property="og:title" content="Diseño Web Mendoza | ZafiroWeb - Páginas Profesionales">
+  <meta property="og:description" content="Creamos páginas web profesionales en Mendoza. Entrega en 7 días. ¡Consultá gratis!">
+  <meta property="og:image" content="https://zafiroweb.com/og-image.jpg">
+  <meta property="og:url" content="https://zafiroweb.com">
+  <meta property="og:type" content="website">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Diseño Web Mendoza | ZafiroWeb">
+  <meta name="twitter:description" content="Páginas web profesionales en Mendoza. Entrega en 7 días.">
+  
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'GA_MEASUREMENT_ID');
+  </script>
+  
+  <!-- Meta Pixel (Facebook) -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'META_PIXEL_ID');
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none" 
+         src="https://www.facebook.com/tr?id=META_PIXEL_ID&ev=PageView&noscript=1"/>
+  </noscript>
+  
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "ZafiroWeb",
+    "image": "https://zafiroweb.com/logo.png",
+    "description": "Diseño y desarrollo de páginas web profesionales en Mendoza",
+    "url": "https://zafiroweb.com",
+    "telephone": "+5492604323056",
+    "email": "FranYTTT@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Mendoza",
+      "addressCountry": "AR"
+    },
+    "priceRange": "$60000 - $120000 ARS",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "50"
+    },
+    "sameAs": [
+      "https://www.facebook.com/profile.php?id=61574357000256",
+      "https://www.instagram.com/zafiro.desarrolloweb/"
+    ]
+  }
+  </script>
+  
+  <!-- Favicon -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M50 15L20 45L50 90L80 45L50 15Z' fill='%23f97316' stroke='%23fbbf24' stroke-width='3'/><path d='M50 15v75M20 45h60' stroke='%23fff7ed' stroke-width='2' opacity='0.5'/></svg>" />
+  <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M50 15L20 45L50 90L80 45L50 15Z' fill='%23f97316' stroke='%23fbbf24' stroke-width='3'/></svg>">
+  
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -22,11 +96,30 @@
       scroll-behavior: smooth;
     }
     
+    :root {
+      --bg-primary: #ffffff;
+      --bg-secondary: #fafafa;
+      --text-primary: #000000;
+      --text-secondary: #374151;
+      --text-muted: #6b7280;
+      --border-color: #e5e7eb;
+    }
+    
+    [data-theme="dark"] {
+      --bg-primary: #0f0f0f;
+      --bg-secondary: #1a1a1a;
+      --text-primary: #ffffff;
+      --text-secondary: #d1d5db;
+      --text-muted: #9ca3af;
+      --border-color: #374151;
+    }
+    
     body { 
       font-family: 'Inter', sans-serif; 
-      background-color: #ffffff;
-      color: #000000;
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
       line-height: 1.6;
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
     
     .display { font-family: 'Space Grotesk', sans-serif; }
@@ -36,8 +129,14 @@
       font-weight: 700;
     }
     
-    .section-white { background: #ffffff; }
-    .section-light { background: #fafafa; }
+    .section-white { 
+      background: var(--bg-primary);
+      transition: background-color 0.3s ease;
+    }
+    .section-light { 
+      background: var(--bg-secondary);
+      transition: background-color 0.3s ease;
+    }
     
     .hero-section {
       background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
@@ -93,9 +192,27 @@
       background: rgba(249, 115, 22, 0.1);
     }
     
+    .btn-secondary {
+      background: transparent;
+      color: var(--text-primary);
+      border: 2px solid #f97316;
+      font-weight: 600;
+      padding: 1rem 2rem;
+      border-radius: 9999px;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+    }
+    
+    .btn-secondary:hover {
+      background: #f97316;
+      color: #ffffff;
+    }
+    
     .card {
-      background: #ffffff;
-      border: 1px solid #e5e7eb;
+      background: var(--bg-primary);
+      border: 1px solid var(--border-color);
       border-radius: 16px;
       padding: 2rem;
       box-shadow: 0 2px 8px rgba(0,0,0,0.04);
@@ -123,7 +240,7 @@
     }
     
     .price-number {
-      color: #000000;
+      color: var(--text-primary);
       font-size: 3rem;
       font-weight: 900;
       line-height: 1;
@@ -173,7 +290,7 @@
       font-size: 0.95rem;
     }
     
-    .card .feature-list li { color: #374151; }
+    .card .feature-list li { color: var(--text-secondary); }
     .card .feature-list i { color: #059669; }
     .plan-featured .feature-list li { color: #e5e7eb; }
     .plan-featured .feature-list i { color: #f97316; }
@@ -194,7 +311,11 @@
       padding: 0.75rem 0;
     }
     
-    .navbar-scrolled .nav-link { color: #000000; }
+    [data-theme="dark"] .navbar-scrolled {
+      background: rgba(15, 15, 15, 0.98);
+    }
+    
+    .navbar-scrolled .nav-link { color: var(--text-primary); }
     .nav-link {
       color: #ffffff;
       font-weight: 500;
@@ -223,103 +344,10 @@
     }
     .footer a:hover { color: #f97316; }
     
-    .modal-overlay {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.8);
-      z-index: 100;
-      justify-content: center;
-      align-items: center;
-      padding: 1rem;
-    }
-    .modal-overlay.active { display: flex; }
-    
-    .modal-content {
-      background: #ffffff;
-      border-radius: 20px;
-      max-width: 500px;
-      width: 100%;
-      padding: 2.5rem;
-      position: relative;
-    }
-    
-    .typing::after {
-      content: '|';
-      animation: blink 1s infinite;
-      color: #f97316;
-    }
-    
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      51%, 100% { opacity: 0; }
-    }
-    
-    .stat-number {
-      font-size: 2.5rem;
-      font-weight: 900;
-      color: #000000;
-    }
-    
-    .step-number {
-      width: 60px;
-      height: 60px;
-      background: #f97316;
-      color: #000000;
-      border-radius: 16px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.5rem;
-      font-weight: 900;
-      margin: 0 auto 1rem;
-    }
-    
-    details {
-      background: #ffffff;
-      border: 1px solid #e5e7eb;
-      border-radius: 12px;
-      margin-bottom: 1rem;
-      overflow: hidden;
-    }
-    
-    summary {
-      padding: 1.25rem;
-      font-weight: 600;
-      color: #000000;
-      cursor: pointer;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      list-style: none;
-    }
-    
-    summary i {
-      color: #f97316;
-      transition: transform 0.3s ease;
-    }
-    
-    details[open] summary i {
-      transform: rotate(180deg);
-    }
-    
-    details > div {
-      padding: 0 1.25rem 1.25rem;
-      color: #4b5563;
-      line-height: 1.7;
-    }
-    
-    .cta-section {
-      background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
-    }
-    
     .mobile-menu {
       display: none;
-      background: #ffffff;
-      border-top: 1px solid #e5e7eb;
+      background: var(--bg-primary);
+      border-top: 1px solid var(--border-color);
       padding: 1rem;
       position: absolute;
       width: 100%;
@@ -333,7 +361,7 @@
     .mobile-menu a {
       display: block;
       padding: 0.75rem 1rem;
-      color: #000000;
+      color: var(--text-primary);
       text-decoration: none;
       font-weight: 500;
       border-radius: 8px;
@@ -341,14 +369,14 @@
     }
     
     .mobile-menu a:hover {
-      background: #f3f4f6;
+      background: var(--bg-secondary);
     }
 
     .portfolio-card {
-      background: white;
+      background: var(--bg-primary);
       border-radius: 20px;
       overflow: hidden;
-      border: 1px solid #e5e7eb;
+      border: 1px solid var(--border-color);
       box-shadow: 0 4px 6px rgba(0,0,0,0.05);
       transition: all 0.3s ease;
     }
@@ -373,8 +401,8 @@
     .tag {
       display: inline-block;
       padding: 0.25rem 0.75rem;
-      background: #f3f4f6;
-      color: #4b5563;
+      background: var(--bg-secondary);
+      color: var(--text-secondary);
       border-radius: 9999px;
       font-size: 0.75rem;
       font-weight: 500;
@@ -407,11 +435,15 @@
       gap: 0.5rem;
       background: #fef3c7;
       color: #92400e;
+      padding: 0.5rem 1rem;
+      border-radius: 9999px;
+      font-size: 0.875rem;
+      font-weight: 500;
     }
 
     .benefit-card {
-      background: linear-gradient(145deg, #ffffff 0%, #fafafa 100%);
-      border: 2px solid #f3f4f6;
+      background: linear-gradient(145deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+      border: 2px solid var(--border-color);
       border-radius: 20px;
       padding: 2rem;
       transition: all 0.3s ease;
@@ -467,234 +499,786 @@
       margin-top: 1rem;
     }
     
-    .highlight-text {
-      background: linear-gradient(120deg, #fef3c7 0%, #fef3c7 100%);
-      background-repeat: no-repeat;
-      background-size: 100% 40%;
-      background-position: 0 88%;
-      padding: 0 4px;
-    }
-      padding: 0.5rem 1rem;
-      border-radius: 9999px;
-      font-size: 0.875rem;
-      font-weight: 500;
-    }
-    
-    /* EFECTOS SUTILES */
-    
-    /* Partículas flotantes en hero */
-    .particles {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      pointer-events: none;
-    }
-    
-    .particle {
-      position: absolute;
-      width: 4px;
-      height: 4px;
-      background: rgba(249, 115, 22, 0.3);
+    /* Botón flotante WhatsApp */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 60px;
+      height: 60px;
+      background: #25d366;
+      color: white;
       border-radius: 50%;
-      animation: float 15s infinite;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+      z-index: 999;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      animation: pulse-whatsapp 2s infinite;
     }
     
-    @keyframes float {
-      0%, 100% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
-      10% { opacity: 1; }
-      90% { opacity: 1; }
-      100% { transform: translateY(-100vh) rotate(720deg); opacity: 0; }
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
     }
     
-    /* Brillo sutil en cards al hover */
-    .card::after {
-      content: '';
-      position: absolute;
+    @keyframes pulse-whatsapp {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+    
+    /* Formulario de contacto */
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+    
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: var(--text-secondary);
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 2px solid var(--border-color);
+      border-radius: 12px;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      font-family: inherit;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+    }
+    
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: #f97316;
+      box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.1);
+    }
+    
+    /* Testimonios */
+    .testimonial-card {
+      background: var(--bg-primary);
+      border-radius: 20px;
+      padding: 2rem;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      transition: all 0.3s ease;
+      flex-shrink: 0;
+      width: 100%;
+    }
+    
+    @media (min-width: 768px) {
+      .testimonial-card {
+        width: auto;
+      }
+    }
+    
+    .testimonial-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+    }
+    
+    .testimonial-avatar {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #f97316;
+    }
+    
+    .stars {
+      color: #fbbf24;
+    }
+    
+    /* Sección de confianza */
+    .trust-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+      color: #92400e;
+      padding: 0.75rem 1.5rem;
+      border-radius: 9999px;
+      font-weight: 700;
+      border: 2px solid #fbbf24;
+    }
+    
+    /* Logos de clientes */
+    .client-logo {
+      filter: grayscale(100%);
+      opacity: 0.6;
+      transition: all 0.3s ease;
+    }
+    
+    .client-logo:hover {
+      filter: grayscale(0%);
+      opacity: 1;
+    }
+    
+    /* Pop-up de salida */
+    .exit-popup {
+      display: none;
+      position: fixed;
       top: 0;
-      left: -100%;
+      left: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(249, 115, 22, 0.1), transparent);
-      transition: left 0.5s ease;
-      pointer-events: none;
+      background: rgba(0,0,0,0.85);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
     }
     
-    .card:hover::after {
-      left: 100%;
+    .exit-popup.active {
+      display: flex;
+      animation: fadeIn 0.3s ease;
     }
     
-    /* Animación de entrada suave */
-    .fade-in-up {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
     
-    .fade-in-up.visible {
-      opacity: 1;
+    .exit-popup-content {
+      background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
+      border-radius: 24px;
+      padding: 3rem;
+      max-width: 500px;
+      width: 100%;
+      text-align: center;
+      position: relative;
+      border: 2px solid #f97316;
+    }
+    
+    .exit-popup-close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      width: 40px;
+      height: 40px;
+      background: rgba(255,255,255,0.1);
+      border: none;
+      border-radius: 50%;
+      color: #ffffff;
+      font-size: 1.25rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .exit-popup-close:hover {
+      background: rgba(249, 115, 22, 0.3);
+    }
+    
+    /* Precio destacado en hero */
+    .hero-price-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(249, 115, 22, 0.2);
+      border: 2px solid #f97316;
+      padding: 0.75rem 1.5rem;
+      border-radius: 9999px;
+      animation: pulse-price 2s infinite;
+    }
+    
+    @keyframes pulse-price {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(249, 115, 22, 0.4); }
+      50% { box-shadow: 0 0 0 10px rgba(249, 115, 22, 0); }
+    }
+    
+    /* ===================== NUEVAS MEJORAS ===================== */
+    
+    /* 1. MODO OSCURO TOGGLE */
+    .theme-toggle {
+      position: fixed;
+      top: 100px;
+      right: 30px;
+      width: 50px;
+      height: 50px;
+      background: var(--bg-primary);
+      border: 2px solid var(--border-color);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 40;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    
+    .theme-toggle:hover {
+      transform: scale(1.1);
+      border-color: #f97316;
+    }
+    
+    .theme-toggle i {
+      font-size: 1.25rem;
+      color: var(--text-primary);
+    }
+    
+    /* 2. STICKY CTA INTELIGENTE */
+    .sticky-cta {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: var(--bg-primary);
+      border-top: 1px solid var(--border-color);
+      padding: 1rem;
+      z-index: 45;
+      transform: translateY(100%);
+      transition: transform 0.3s ease;
+      box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
+    }
+    
+    .sticky-cta.visible {
       transform: translateY(0);
     }
     
-    /* Efecto de pulso sutil en elementos destacados */
-    .pulse-soft {
-      animation: pulseSoft 3s ease-in-out infinite;
+    .sticky-cta-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
     }
     
-    @keyframes pulseSoft {
-      0%, 100% { box-shadow: 0 0 0 0 rgba(249, 115, 22, 0.2); }
-      50% { box-shadow: 0 0 20px 5px rgba(249, 115, 22, 0.1); }
+    @media (max-width: 768px) {
+      .sticky-cta-content {
+        flex-direction: column;
+        text-align: center;
+      }
     }
     
-    /* Gradient shift sutil en hero */
-    .hero-section::before {
-      content: '';
+    /* 3. CALCULADORA ROI */
+    .calculator-section {
+      background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+      border-radius: 24px;
+      padding: 3rem;
+      color: white;
+    }
+    
+    .calculator-input {
+      background: rgba(255,255,255,0.1);
+      border: 2px solid rgba(255,255,255,0.2);
+      border-radius: 12px;
+      padding: 1rem;
+      color: white;
+      width: 100%;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+    }
+    
+    .calculator-input:focus {
+      outline: none;
+      border-color: #f97316;
+      background: rgba(255,255,255,0.15);
+    }
+    
+    .calculator-result {
+      background: rgba(249, 115, 22, 0.2);
+      border: 2px solid #f97316;
+      border-radius: 16px;
+      padding: 2rem;
+      text-align: center;
+      margin-top: 2rem;
+    }
+    
+    .calculator-result-number {
+      font-size: 3rem;
+      font-weight: 900;
+      color: #f97316;
+      font-family: 'Space Grotesk', monospace;
+    }
+    
+    /* 4. COMPARADOR DE PLANES */
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--bg-primary);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+    
+    .comparison-table th,
+    .comparison-table td {
+      padding: 1.25rem;
+      text-align: center;
+      border-bottom: 1px solid var(--border-color);
+    }
+    
+    .comparison-table th {
+      background: var(--bg-secondary);
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+    
+    .comparison-table td:first-child {
+      text-align: left;
+      font-weight: 500;
+    }
+    
+    .comparison-table tr:hover {
+      background: var(--bg-secondary);
+    }
+    
+    .check-green { color: #22c55e; font-size: 1.25rem; }
+    .check-red { color: #ef4444; font-size: 1.25rem; }
+    .plan-highlight { background: rgba(249, 115, 22, 0.1) !important; }
+    
+    /* 5. SLIDER ANTES/DESPUÉS */
+    .before-after-container {
+      position: relative;
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+    }
+    
+    .before-after-slider {
+      position: relative;
+      width: 100%;
+      height: 400px;
+      overflow: hidden;
+    }
+    
+    .before-img,
+    .after-img {
       position: absolute;
       top: 0;
       left: 0;
-      right: 0;
-      bottom: 0;
-      background: radial-gradient(ellipse at 20% 50%, rgba(249, 115, 22, 0.08) 0%, transparent 50%),
-                  radial-gradient(ellipse at 80% 50%, rgba(251, 146, 60, 0.05) 0%, transparent 50%);
-      animation: gradientShift 10s ease-in-out infinite;
-      pointer-events: none;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      font-weight: 700;
     }
     
-    @keyframes gradientShift {
-      0%, 100% { opacity: 0.5; transform: scale(1); }
-      50% { opacity: 1; transform: scale(1.1); }
+    .before-img {
+      background: linear-gradient(135deg, #e5e7eb 0%, #d1d5db 100%);
+      color: #6b7280;
+      z-index: 1;
     }
     
-    /* Efecto de onda sutil en botones */
-    .btn-primary {
-      position: relative;
-      overflow: hidden;
+    .after-img {
+      background: linear-gradient(135deg, #f97316 0%, #fbbf24 100%);
+      color: #000;
+      z-index: 2;
+      width: 50%;
+      border-right: 4px solid white;
+      box-shadow: 5px 0 20px rgba(0,0,0,0.3);
     }
     
-    .btn-primary::before {
-      content: '';
+    .slider-handle {
       position: absolute;
       top: 50%;
       left: 50%;
-      width: 0;
-      height: 0;
-      background: rgba(255, 255, 255, 0.2);
-      border-radius: 50%;
       transform: translate(-50%, -50%);
-      transition: width 0.6s ease, height 0.6s ease;
+      width: 50px;
+      height: 50px;
+      background: white;
+      border-radius: 50%;
+      z-index: 3;
+      cursor: ew-resize;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     
-    .btn-primary:active::before {
-      width: 300px;
-      height: 300px;
+    .slider-handle i {
+      color: #f97316;
+      font-size: 1.25rem;
     }
     
-    /* Efecto de borde brillante sutil */
-    .glow-border {
-      position: relative;
-    }
-    
-    .glow-border::before {
-      content: '';
+    .before-label,
+    .after-label {
       position: absolute;
-      inset: -2px;
-      background: linear-gradient(45deg, transparent, rgba(249, 115, 22, 0.3), transparent);
-      border-radius: inherit;
-      z-index: -1;
+      top: 20px;
+      background: rgba(0,0,0,0.7);
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      z-index: 4;
+    }
+    
+    .before-label { left: 20px; }
+    .after-label { right: 20px; }
+    
+    /* 6. CARRUSEL TESTIMONIOS MÓVIL */
+    .testimonials-carousel {
+      display: flex;
+      gap: 1.5rem;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      padding: 1rem 0;
+      scrollbar-width: none;
+    }
+    
+    .testimonials-carousel::-webkit-scrollbar {
+      display: none;
+    }
+    
+    .testimonials-carousel .testimonial-card {
+      scroll-snap-align: center;
+      min-width: 85%;
+      max-width: 350px;
+    }
+    
+    @media (min-width: 768px) {
+      .testimonials-carousel .testimonial-card {
+        min-width: auto;
+        max-width: none;
+      }
+    }
+    
+    .carousel-dots {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+    
+    .carousel-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--border-color);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .carousel-dot.active {
+      background: #f97316;
+      width: 30px;
+      border-radius: 5px;
+    }
+    
+    /* 7. BOTÓN GUARDAR PRESUPUESTO */
+    .save-budget-btn {
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .save-budget-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);
+    }
+    
+    /* 8. CHATBOT SIMPLE */
+    .chatbot-container {
+      position: fixed;
+      bottom: 100px;
+      right: 30px;
+      width: 350px;
+      max-height: 500px;
+      background: var(--bg-primary);
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+      z-index: 998;
+      overflow: hidden;
+      transform: scale(0);
+      transform-origin: bottom right;
+      transition: transform 0.3s ease;
+      border: 1px solid var(--border-color);
+    }
+    
+    .chatbot-container.open {
+      transform: scale(1);
+    }
+    
+    .chatbot-header {
+      background: linear-gradient(135deg, #f97316 0%, #fbbf24 100%);
+      color: #000;
+      padding: 1rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
+    .chatbot-header h4 {
+      font-weight: 700;
+      margin: 0;
+    }
+    
+    .chatbot-close {
+      background: none;
+      border: none;
+      font-size: 1.25rem;
+      cursor: pointer;
+      color: #000;
+    }
+    
+    .chatbot-messages {
+      height: 300px;
+      overflow-y: auto;
+      padding: 1rem;
+    }
+    
+    .chatbot-message {
+      margin-bottom: 1rem;
+      max-width: 80%;
+      padding: 0.75rem 1rem;
+      border-radius: 12px;
+      font-size: 0.9rem;
+    }
+    
+    .chatbot-message.bot {
+      background: var(--bg-secondary);
+      color: var(--text-primary);
+      border-bottom-left-radius: 4px;
+    }
+    
+    .chatbot-message.user {
+      background: #f97316;
+      color: #000;
+      margin-left: auto;
+      border-bottom-right-radius: 4px;
+    }
+    
+    .chatbot-options {
+      padding: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      border-top: 1px solid var(--border-color);
+    }
+    
+    .chatbot-option {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      padding: 0.5rem 1rem;
+      border-radius: 9999px;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      color: var(--text-primary);
+    }
+    
+    .chatbot-option:hover {
+      background: #f97316;
+      border-color: #f97316;
+      color: #000;
+    }
+    
+    .chatbot-toggle {
+      position: fixed;
+      bottom: 100px;
+      right: 30px;
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, #f97316 0%, #fbbf24 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 997;
+      box-shadow: 0 4px 20px rgba(249, 115, 22, 0.4);
+      transition: all 0.3s ease;
+    }
+    
+    .chatbot-toggle:hover {
+      transform: scale(1.1);
+    }
+    
+    .chatbot-toggle.hidden {
       opacity: 0;
-      transition: opacity 0.3s ease;
+      pointer-events: none;
     }
     
-    .glow-border:hover::before {
-      opacity: 1;
-      animation: rotate 3s linear infinite;
+    .chatbot-toggle i {
+      font-size: 1.5rem;
+      color: #000;
     }
     
-    @keyframes rotate {
-      from { transform: rotate(0deg); }
+    /* 9. ANIMACIONES GSAP */
+    .gsap-reveal {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    
+    .gsap-reveal-left {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    
+    .gsap-reveal-right {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    
+    .gsap-scale {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    
+    /* 10. PRECIO DÓLAR TIEMPO REAL */
+    .dollar-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 9999px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      animation: pulse-green 2s infinite;
+    }
+    
+    @keyframes pulse-green {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4); }
+      50% { box-shadow: 0 0 0 10px rgba(16, 185, 129, 0); }
+    }
+    
+    .dollar-badge.updating {
+      animation: spin 1s linear infinite;
+    }
+    
+    @keyframes spin {
       to { transform: rotate(360deg); }
     }
     
-    /* Stagger delay para animaciones */
-    .stagger-1 { transition-delay: 0.1s; }
-    .stagger-2 { transition-delay: 0.2s; }
-    .stagger-3 { transition-delay: 0.3s; }
-    .stagger-4 { transition-delay: 0.4s; }
-    .stagger-5 { transition-delay: 0.5s; }
-    .stagger-6 { transition-delay: 0.6s; }
+    /* 11. GARANTÍA VISUAL */
+    .guarantee-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 1rem;
+      background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);
+      border: 3px solid #22c55e;
+      padding: 1.5rem 2rem;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(34, 197, 94, 0.2);
+    }
     
-    /* Efecto de escala suave en imágenes/portfolio */
-    .portfolio-card .preview {
+    .guarantee-icon {
+      width: 60px;
+      height: 60px;
+      background: #22c55e;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      color: white;
+      animation: pulse-guarantee 2s infinite;
+    }
+    
+    @keyframes pulse-guarantee {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+    }
+    
+    /* 12. TYPING EFFECT */
+    .typing::after {
+      content: '|';
+      animation: blink 1s infinite;
+      color: #f97316;
+    }
+    
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      51%, 100% { opacity: 0; }
+    }
+    
+    /* 13. COUNTER ANIMATION */
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 900;
+      color: var(--text-primary);
+    }
+    
+    /* 14. STEP NUMBER */
+    .step-number {
+      width: 60px;
+      height: 60px;
+      background: #f97316;
+      color: #000000;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      font-weight: 900;
+      margin: 0 auto 1rem;
+    }
+    
+    /* DETAILS/FAQ */
+    details {
+      background: var(--bg-primary);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      margin-bottom: 1rem;
       overflow: hidden;
     }
     
-    .portfolio-card:hover .preview > div:first-child {
-      transform: scale(1.05);
-      transition: transform 0.5s ease;
+    summary {
+      padding: 1.25rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      list-style: none;
     }
     
-    /* Sombra flotante sutil */
-    .float-shadow {
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    
-    .float-shadow:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-    }
-    
-    /* Efecto de typing cursor mejorado */
-    .typing::after {
-      content: '|';
-      animation: blink 1s infinite, glow 2s ease-in-out infinite;
+    summary i {
       color: #f97316;
-      text-shadow: 0 0 10px rgba(249, 115, 22, 0.5);
+      transition: transform 0.3s ease;
     }
     
-    @keyframes glow {
-      0%, 100% { text-shadow: 0 0 5px rgba(249, 115, 22, 0.5); }
-      50% { text-shadow: 0 0 20px rgba(249, 115, 22, 0.8), 0 0 30px rgba(249, 115, 22, 0.4); }
+    details[open] summary i {
+      transform: rotate(180deg);
     }
     
-    /* Efecto de número contador */
-    .stat-number {
-      background: linear-gradient(135deg, #000 0%, #333 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      position: relative;
+    details > div {
+      padding: 0 1.25rem 1.25rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
     }
     
-    .stat-number::after {
-      content: '';
-      position: absolute;
-      bottom: -5px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 0;
-      height: 2px;
-      background: linear-gradient(90deg, transparent, #f97316, transparent);
-      transition: width 0.5s ease;
-    }
-    
-    .stat-number.visible::after {
-      width: 60%;
-    }
-    
-    /* Línea decorativa animada */
-    .animated-line {
-      height: 2px;
-      background: linear-gradient(90deg, transparent, #f97316, transparent);
-      width: 0;
-      transition: width 1s ease;
-    }
-    
-    .animated-line.visible {
-      width: 100%;
+    .cta-section {
+      background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
     }
   </style>
 </head>
 <body>
+
+  <!-- TOGGLE MODO OSCURO -->
+  <div class="theme-toggle" onclick="toggleTheme()" title="Cambiar modo claro/oscuro">
+    <i class="fas fa-moon" id="theme-icon"></i>
+  </div>
 
   <!-- NAV -->
   <nav class="navbar" id="navbar">
@@ -702,11 +1286,8 @@
       <a href="#" class="flex items-center gap-3">
         <div class="w-10 h-10 flex items-center justify-center">
           <svg viewBox="0 0 48 48" fill="none" class="w-9 h-9 drop-shadow-lg">
-            <!-- Escudo exterior dorado -->
             <path d="M24 2C24 2 8 8 8 20C8 32 24 46 24 46C24 46 40 32 40 20C40 8 24 2 24 2Z" fill="url(#shield-bg)" stroke="url(#shield-border)" stroke-width="1.5"/>
-            <!-- Fondo interior oscuro -->
             <path d="M24 5C24 5 11 10 11 20C11 30 24 42 24 42C24 42 37 30 37 20C37 10 24 5 24 5Z" fill="#1a1a1a"/>
-            <!-- Diamante/Zafiro -->
             <path d="M24 12L16 20L24 34L32 20L24 12Z" fill="url(#gem-gradient)" stroke="#fb923c" stroke-width="0.8"/>
             <path d="M24 12V34M16 20H32" stroke="#fff7ed" stroke-width="0.5" opacity="0.4"/>
             <path d="M20 16L24 12L28 16" stroke="#fff7ed" stroke-width="0.5" opacity="0.3"/>
@@ -734,11 +1315,11 @@
         <a href="#servicios" class="nav-link">Servicios</a>
         <a href="#beneficios" class="nav-link">Beneficios</a>
         <a href="#portfolio" class="nav-link">Portafolio</a>
+        <a href="#calculadora" class="nav-link">Calculadora</a>
         <a href="#precios" class="nav-link">Precios</a>
-        <a href="#faq" class="nav-link">FAQ</a>
-        <a href="https://wa.me/5492604323056" target="_blank" rel="noopener noreferrer" class="btn-primary text-sm">
+        <a href="#contacto" class="btn-primary text-sm">
           <i class="fab fa-whatsapp"></i>
-          Contactar
+          Consultar gratis
         </a>
       </div>
       
@@ -751,22 +1332,26 @@
       <a href="#servicios">Servicios</a>
       <a href="#beneficios">Beneficios</a>
       <a href="#portfolio">Portafolio</a>
+      <a href="#calculadora">Calculadora</a>
       <a href="#precios">Precios</a>
-      <a href="#faq">FAQ</a>
-      <a href="https://wa.me/5492604323056" target="_blank" rel="noopener noreferrer" class="btn-primary text-center mt-4 justify-center w-full" style="color: black;">
+      <a href="#contacto" class="btn-primary text-center mt-4 justify-center w-full" style="color: black;">
         <i class="fab fa-whatsapp"></i>
-        Contactar
+        Consultar gratis
       </a>
     </div>
   </nav>
 
   <!-- HERO -->
-  <section class="hero-section flex items-center pt-32 pb-20 relative overflow-hidden">
-    <!-- Partículas flotantes sutiles -->
-    <div class="particles" id="particles"></div>
+  <section class="hero-section flex items-center pt-32 pb-20">
     <div class="max-w-7xl mx-auto px-6 w-full">
       <div class="grid lg:grid-cols-2 gap-16 items-center">
-        <div class="space-y-8 fade-in-up">
+        <div class="space-y-8 gsap-reveal">
+          <!-- Precio destacado arriba -->
+          <div class="hero-price-tag">
+            <span class="text-white font-semibold">Desde</span>
+            <span class="text-2xl font-black text-orange-400">$60.000 ARS</span>
+          </div>
+          
           <div class="space-y-3">
             <div class="flex items-center gap-4 md:gap-5">
               <svg viewBox="0 0 48 48" fill="none" class="w-16 h-16 md:w-20 md:h-20 drop-shadow-2xl">
@@ -807,16 +1392,11 @@
             Desarrollo páginas profesionales con <span class="text-orange-400 font-semibold">sistema de turnos integrado</span>. Diseños únicos que convierten visitantes en clientes.
           </p>
           
-          <div class="flex items-baseline gap-3 flex-wrap pt-2">
-            <span class="text-gray-400">Desde</span>
-            <span class="text-5xl font-black text-white">$60.000</span>
-            <span class="text-orange-400 font-bold text-2xl">ARS</span>
-          </div>
-          
+          <!-- CTA Principal destacado -->
           <div class="flex flex-wrap gap-4 pt-4">
-            <a href="https://wa.me/5492604323056?text=Hola!%20Vi%20tu%20web%20y%20quiero%20consultar%20por%20un%20proyecto" target="_blank" rel="noopener noreferrer" class="btn-primary">
+            <a href="#contacto" class="btn-primary text-lg px-8 py-4 gsap-scale">
               <i class="fab fa-whatsapp text-xl"></i>
-              <span>Consultar gratis</span>
+              <span>Consultar gratis ahora</span>
             </a>
             <a href="#portfolio" class="btn-secondary-dark">
               <span>Ver trabajos</span>
@@ -840,14 +1420,14 @@
           </div>
         </div>
         
-        <div class="hidden lg:block relative fade-in-up stagger-2">
+        <div class="hidden lg:block relative gsap-reveal-right">
           <div class="absolute -inset-4 bg-orange-500/20 rounded-3xl blur-3xl"></div>
           <div class="relative bg-gray-900 rounded-2xl p-6 border border-gray-700">
             <div class="flex items-center gap-2 mb-4">
               <div class="w-3 h-3 bg-red-500 rounded-full"></div>
               <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
               <div class="w-3 h-3 bg-green-500 rounded-full"></div>
-              <div class="flex-1 text-center text-xs text-gray-500">zafiro-web.vercel.app</div>
+              <div class="flex-1 text-center text-xs text-gray-500">zafiroweb.com</div>
             </div>
             <div class="space-y-3">
               <div class="h-4 bg-gray-700 rounded w-3/4"></div>
@@ -865,25 +1445,26 @@
     </div>
   </section>
 
+
   <!-- STATS -->
   <section class="py-12 section-light border-y border-gray-100">
     <div class="max-w-7xl mx-auto px-6">
       <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-        <div class="fade-in-up stagger-1">
-          <div class="stat-number">50+</div>
+        <div class="gsap-reveal">
+          <div class="stat-number" data-target="50">0</div>
           <div class="text-gray-500 text-sm uppercase font-semibold">Proyectos entregados</div>
         </div>
-        <div class="fade-in-up stagger-2">
-          <div class="stat-number">100%</div>
-          <div class="text-gray-500 text-sm uppercase font-semibold">Clientes satisfechos</div>
+        <div class="gsap-reveal">
+          <div class="stat-number" data-target="100">0</div>
+          <div class="text-gray-500 text-sm uppercase font-semibold">% Clientes satisfechos</div>
         </div>
-        <div class="fade-in-up stagger-3">
-          <div class="stat-number">7</div>
+        <div class="gsap-reveal">
+          <div class="stat-number" data-target="7">0</div>
           <div class="text-gray-500 text-sm uppercase font-semibold">Días de entrega</div>
         </div>
-        <div class="fade-in-up stagger-4">
-          <div class="stat-number">24/7</div>
-          <div class="text-gray-500 text-sm uppercase font-semibold">Soporte accesible</div>
+        <div class="gsap-reveal">
+          <div class="stat-number" data-target="30">0</div>
+          <div class="text-gray-500 text-sm uppercase font-semibold">Días de garantía</div>
         </div>
       </div>
     </div>
@@ -892,55 +1473,337 @@
   <!-- SERVICIOS -->
   <section id="servicios" class="section-white py-24">
     <div class="max-w-7xl mx-auto px-6">
-      <div class="text-center mb-16">
+      <div class="text-center mb-16 gsap-reveal">
         <h2 class="text-4xl md:text-5xl font-bold mb-4 elegant-title">¿Qué incluye?</h2>
         <p class="text-xl text-gray-600 max-w-2xl mx-auto">Todo lo que necesitás para tener presencia online profesional y empezar a recibir reservas.</p>
       </div>
       
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="card fade-in-up stagger-1 glow-border">
+        <div class="card gsap-reveal">
           <div class="icon-box"><i class="fas fa-paint-brush"></i></div>
           <h4 class="font-bold text-lg mb-2">Diseño Único</h4>
           <p class="text-gray-600">Diseño personalizado según tu marca. No uso plantillas genéricas. Cada sitio es único y memorable.</p>
         </div>
         
-        <div class="card fade-in-up stagger-2 glow-border">
+        <div class="card gsap-reveal">
           <div class="icon-box"><i class="fas fa-calendar-check"></i></div>
           <h4 class="font-bold text-lg mb-2">Sistema de Turnos</h4>
           <p class="text-gray-600">Calendario interactivo donde tus clientes reservan directo. Notificaciones automáticas por email.</p>
         </div>
         
-        <div class="card fade-in-up stagger-3 glow-border">
+        <div class="card gsap-reveal">
           <div class="icon-box"><i class="fas fa-mobile-alt"></i></div>
           <h4 class="font-bold text-lg mb-2">100% Responsive</h4>
           <p class="text-gray-600">Se ve perfecto en celulares, tablets y computadoras. Tus clientes pueden reservar desde cualquier lado.</p>
         </div>
         
-        <div class="card fade-in-up stagger-4 glow-border">
+        <div class="card gsap-reveal">
           <div class="icon-box"><i class="fas fa-lock"></i></div>
           <h4 class="font-bold text-lg mb-2">Panel de Admin</h4>
           <p class="text-gray-600">Gestioná tus turnos, disponibilidad y datos de clientes desde un panel privado con contraseña.</p>
         </div>
         
-        <div class="card fade-in-up stagger-5 glow-border">
+        <div class="card gsap-reveal">
           <div class="icon-box"><i class="fas fa-rocket"></i></div>
           <h4 class="font-bold text-lg mb-2">Hosting Accesible</h4>
           <p class="text-gray-600">Precio accesible según la necesidad del cliente. Dominio personalizado opcional.</p>
         </div>
         
-        <div class="card fade-in-up stagger-6 glow-border">
+        <div class="card gsap-reveal">
           <div class="icon-box"><i class="fas fa-headset"></i></div>
-          <h4 class="font-bold text-lg mb-2">Soporte Garantizado</h4>
-          <p class="text-gray-600">30 días de soporte post-entrega para ajustes. Después, soporte mensual accesible.</p>
+          <h4 class="font-bold text-lg mb-2">Mantenimiento Mensual</h4>
+          <p class="text-gray-600">Soporte técnico y actualizaciones desde $20-30 USD mensual. Ajustes menores incluidos.</p>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- CALCULADORA ROI -->
+  <section id="calculadora" class="section-light py-24">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-12 gsap-reveal">
+        <div class="inline-flex items-center gap-2 bg-orange-100 text-orange-700 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+          <i class="fas fa-calculator"></i>
+          Calculadora de retorno
+        </div>
+        <h2 class="text-4xl md:text-5xl font-bold mb-4 elegant-title">¿Cuánto podés ganar?</h2>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">Calculá cuánto tiempo te toma recuperar tu inversión con tu propia web.</p>
+      </div>
+      
+      <div class="calculator-section gsap-scale">
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="space-y-6">
+            <div>
+              <label class="block text-gray-300 mb-2 font-medium">¿Cuántos clientes atendés por semana?</label>
+              <input type="number" id="clientes-semana" class="calculator-input" placeholder="Ej: 20" min="1">
+            </div>
+            
+            <div>
+              <label class="block text-gray-300 mb-2 font-medium">¿Cuánto cobrás por servicio? ($ ARS)</label>
+              <input type="number" id="precio-servicio" class="calculator-input" placeholder="Ej: 5000" min="1">
+            </div>
+            
+            <div>
+              <label class="block text-gray-300 mb-2 font-medium">¿Cuántos turnos perdés por no tener web?</label>
+              <input type="number" id="turnos-perdidos" class="calculator-input" placeholder="Ej: 5" min="0">
+            </div>
+            
+            <button onclick="calcularROI()" class="btn-primary w-full justify-center">
+              <i class="fas fa-calculator"></i>
+              Calcular mi retorno
+            </button>
+          </div>
+          
+          <div class="flex flex-col justify-center">
+            <div id="calculator-result" class="calculator-result" style="display: none;">
+              <p class="text-gray-400 mb-2">Recuperás tu inversión en:</p>
+              <div class="calculator-result-number" id="dias-retorno">--</div>
+              <p class="text-xl text-white mt-2">días</p>
+              
+              <div class="mt-6 pt-6 border-t border-white/20">
+                <p class="text-gray-400 text-sm mb-1">Ganancia adicional mensual estimada:</p>
+                <p class="text-2xl font-bold text-green-400" id="ganancia-mensual">$0 ARS</p>
+              </div>
+              
+              <a href="#contacto" class="btn-primary w-full justify-center mt-6">
+                <i class="fab fa-whatsapp"></i>
+                Quiero empezar
+              </a>
+            </div>
+            
+            <div id="calculator-placeholder" class="text-center text-gray-500">
+              <i class="fas fa-chart-line text-6xl mb-4 opacity-50"></i>
+              <p>Completá los datos para ver tu proyección</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ¿POR QUÉ ELEGIRNOS? -->
+  <section id="porque-elegirnos" class="section-white py-24">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16 gsap-reveal">
+        <div class="trust-badge mb-4">
+          <i class="fas fa-award"></i>
+          <span>Garantía de satisfacción 30 días</span>
+        </div>
+        <h2 class="text-4xl md:text-5xl font-bold mb-4 elegant-title">¿Por qué elegirnos?</h2>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">Nos diferenciamos por nuestra experiencia, velocidad y compromiso con cada proyecto.</p>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="benefit-card text-center gsap-reveal">
+          <div class="benefit-icon mx-auto">
+            <i class="fas fa-shipping-fast"></i>
+          </div>
+          <h4 class="text-xl font-bold text-gray-900 mb-3">Entrega en 7 días</h4>
+          <p class="text-gray-600">Sabemos que el tiempo es dinero. Tu web lista y funcionando en una semana. Sin excusas, sin demoras.</p>
+        </div>
+        
+        <div class="benefit-card text-center gsap-reveal">
+          <div class="benefit-icon mx-auto">
+            <i class="fas fa-gem"></i>
+          </div>
+          <h4 class="text-xl font-bold text-gray-900 mb-3">Diseño único</h4>
+          <p class="text-gray-600">Cada web es diseñada exclusivamente para tu marca. No usamos plantillas ni diseños repetidos.</p>
+        </div>
+        
+        <div class="benefit-card text-center gsap-reveal">
+          <div class="benefit-icon mx-auto">
+            <i class="fas fa-headset"></i>
+          </div>
+          <h4 class="text-xl font-bold text-gray-900 mb-3">Mantenimiento flexible</h4>
+          <p class="text-gray-600">Soporte técnico disponible desde $20-30 USD mensual. Incluye actualizaciones y ajustes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GARANTÍA VISUAL REFORZADA -->
+  <section class="py-16 section-light">
+    <div class="max-w-4xl mx-auto px-6 text-center gsap-reveal">
+      <div class="guarantee-badge">
+        <div class="guarantee-icon">
+          <i class="fas fa-shield-alt"></i>
+        </div>
+        <div class="text-left">
+          <h3 class="text-xl font-bold text-gray-900 mb-1">Garantía de satisfacción 30 días</h3>
+          <p class="text-gray-600">Si no estás 100% conforme, te devolvemos tu dinero. Sin preguntas.</p>
+        </div>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-6 mt-12">
+        <div class="flex items-center justify-center gap-3 text-gray-600">
+          <i class="fas fa-check-circle text-green-500 text-xl"></i>
+          <span>Dinero de vuelta garantizado</span>
+        </div>
+        <div class="flex items-center justify-center gap-3 text-gray-600">
+          <i class="fas fa-check-circle text-green-500 text-xl"></i>
+          <span>Soporte técnico accesible</span>
+        </div>
+        <div class="flex items-center justify-center gap-3 text-gray-600">
+          <i class="fas fa-check-circle text-green-500 text-xl"></i>
+          <span>Entrega puntual o gratis</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOGOS DE CLIENTES -->
+  <section class="py-16 section-white border-y border-gray-100">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-12 gsap-reveal">
+        <h3 class="text-xl font-semibold text-gray-600 mb-2">Confiaron en nosotros</h3>
+        <p class="text-gray-500">Empresas y profesionales que ya tienen su web profesional</p>
+      </div>
+      
+      <div class="flex flex-wrap justify-center items-center gap-12 md:gap-16 gsap-reveal">
+        <div class="client-logo flex items-center gap-2 text-gray-400">
+          <i class="fas fa-brain text-2xl"></i>
+          <span class="font-semibold">Lic. Florencia Rosales</span>
+        </div>
+        <div class="client-logo flex items-center gap-2 text-gray-400">
+          <i class="fas fa-spa text-2xl"></i>
+          <span class="font-semibold">Lic. Alberti Bigliante</span>
+        </div>
+        <div class="client-logo flex items-center gap-2 text-gray-400">
+          <i class="fas fa-wine-glass text-2xl"></i>
+          <span class="font-semibold">Club de la Bodega</span>
+        </div>
+        <div class="client-logo flex items-center gap-2 text-gray-400">
+          <i class="fas fa-cut text-2xl"></i>
+          <span class="font-semibold">Seven Peluquería</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIOS CON CARRUSEL MÓVIL -->
+  <section class="section-white py-24">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16 gsap-reveal">
+        <h2 class="text-4xl md:text-5xl font-bold mb-4 elegant-title">Lo que dicen nuestros clientes</h2>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">Historias reales de profesionales que transformaron su negocio con una web profesional.</p>
+      </div>
+      
+      <div class="testimonials-carousel" id="testimonials-carousel">
+        <!-- Testimonio 1 -->
+        <div class="testimonial-card">
+          <div class="stars mb-4">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p class="text-gray-600 mb-6 italic">"Mi sistema de turnos online cambió completamente mi consulta. Ahora mis pacientes reservan directo y yo me enfoco en atender. Recuperé horas de mi tiempo cada semana."</p>
+          <div class="flex items-center gap-4">
+            <div class="w-14 h-14 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full flex items-center justify-center text-white text-xl font-bold">
+              FR
+            </div>
+            <div>
+              <h4 class="font-bold text-gray-900">Lic. Florencia Rosales</h4>
+              <p class="text-sm text-orange-600">Psicóloga | La Plata</p>
+              <p class="text-xs text-gray-500 mt-1">+15 pacientes nuevos/mes</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Testimonio 2 -->
+        <div class="testimonial-card">
+          <div class="stars mb-4">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p class="text-gray-600 mb-6 italic">"La web quedó exactamente como la imaginé. El proceso fue rápido y profesional. En una semana ya tenía mi consulta online funcionando perfecto."</p>
+          <div class="flex items-center gap-4">
+            <div class="w-14 h-14 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center text-white text-xl font-bold">
+              SA
+            </div>
+            <div>
+              <h4 class="font-bold text-gray-900">Lic. Alberti Bigliante</h4>
+              <p class="text-sm text-blue-600">Psicoanalista | Mendoza</p>
+              <p class="text-xs text-gray-500 mt-1">Redujo cancelaciones en 40%</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Testimonio 3 -->
+        <div class="testimonial-card">
+          <div class="stars mb-4">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p class="text-gray-600 mb-6 italic">"Increíble servicio. Mi peluquería ahora tiene reservas online 24/7. Mis clientes adoran la facilidad y yo ya no pierdo tiempo atendiendo llamadas."</p>
+          <div class="flex items-center gap-4">
+            <div class="w-14 h-14 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full flex items-center justify-center text-white text-xl font-bold">
+              S
+            </div>
+            <div>
+              <h4 class="font-bold text-gray-900">Seven Peluquería</h4>
+              <p class="text-sm text-purple-600">Estilismo | San Rafael</p>
+              <p class="text-xs text-gray-500 mt-1">Duplicó sus reservas online</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Dots para móvil -->
+      <div class="carousel-dots md:hidden" id="carousel-dots">
+        <div class="carousel-dot active" data-index="0"></div>
+        <div class="carousel-dot" data-index="1"></div>
+        <div class="carousel-dot" data-index="2"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDER ANTES/DESPUÉS -->
+  <section class="section-light py-24">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16 gsap-reveal">
+        <h2 class="text-4xl md:text-5xl font-bold mb-4 elegant-title">Antes vs Después</h2>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">Deslizá para ver la transformación de una web básica a una web ZafiroWeb profesional.</p>
+      </div>
+      
+      <div class="before-after-container gsap-scale">
+        <div class="before-after-slider" id="before-after-slider">
+          <div class="before-img">
+            <div class="text-center">
+              <i class="fas fa-file-alt text-4xl mb-4"></i>
+              <p>Sin web profesional</p>
+              <p class="text-sm mt-2 opacity-70">Llamadas perdidas, clientes sin organizar</p>
+            </div>
+          </div>
+          <div class="after-img" id="after-img" style="width: 50%;">
+            <div class="text-center">
+              <i class="fas fa-rocket text-4xl mb-4"></i>
+              <p>Con ZafiroWeb</p>
+              <p class="text-sm mt-2">Turnos automáticos, más clientes</p>
+            </div>
+          </div>
+          <div class="slider-handle" id="slider-handle" style="left: 50%;">
+            <i class="fas fa-arrows-alt-h"></i>
+          </div>
+          <div class="before-label">ANTES</div>
+          <div class="after-label">DESPUÉS</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
   <!-- BENEFICIOS / PSICOLOGÍA DE VENTAS -->
   <section id="beneficios" class="section-white py-24">
     <div class="max-w-7xl mx-auto px-6">
-      <div class="text-center mb-16">
+      <div class="text-center mb-16 gsap-reveal">
         <div class="inline-flex items-center gap-2 bg-orange-100 text-orange-700 px-4 py-2 rounded-full text-sm font-semibold mb-4">
           <i class="fas fa-chart-line"></i>
           ROI garantizado
@@ -951,8 +1814,7 @@
       
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
         
-        <!-- Beneficio 1: Ahorro de asistente -->
-        <div class="benefit-card">
+        <div class="benefit-card gsap-reveal">
           <div class="benefit-icon"><i class="fas fa-hand-holding-usd"></i></div>
           <h4 class="text-xl font-bold text-gray-900 mb-3">Ahorrá el sueldo de una asistente</h4>
           <p class="text-gray-600 mb-4">Una recepcionista te cuesta aproximadamente <strong class="text-gray-900">$250.000 - $400.000 ARS</strong> por mes. Tu web trabaja 24/7 por menos de lo que cuesta una semana de sueldo.</p>
@@ -962,8 +1824,7 @@
           </div>
         </div>
         
-        <!-- Beneficio 2: No perdés clientes -->
-        <div class="benefit-card">
+        <div class="benefit-card gsap-reveal">
           <div class="benefit-icon"><i class="fas fa-phone-slash"></i></div>
           <h4 class="text-xl font-bold text-gray-900 mb-3">Dejá de perder clientes</h4>
           <p class="text-gray-600 mb-4">El 60% de las personas cuelgan si no atienden en 3 timbres. Tu web nunca "está ocupada" ni descansa. Cada llamada perdida es un cliente que va con tu competencia.</p>
@@ -973,8 +1834,7 @@
           </div>
         </div>
         
-        <!-- Beneficio 3: Trabajás menos -->
-        <div class="benefit-card">
+        <div class="benefit-card gsap-reveal">
           <div class="benefit-icon"><i class="fas fa-hourglass-half"></i></div>
           <h4 class="text-xl font-bold text-gray-900 mb-3">Recuperá 10+ horas semanales</h4>
           <p class="text-gray-600 mb-4">¿Cuánto tiempo perdés atendiendo llamadas para confirmar, cancelar o mover turnos? Con el sistema automatizado, eso desaparece. Más tiempo para vos o para atender más clientes.</p>
@@ -984,19 +1844,17 @@
           </div>
         </div>
         
-        <!-- Beneficio 4: Profesionalismo -->
-        <div class="benefit-card">
+        <div class="benefit-card gsap-reveal">
           <div class="benefit-icon"><i class="fas fa-award"></i></div>
           <h4 class="text-xl font-bold text-gray-900 mb-3">Generá confianza al instante</h4>
-          <p class="text-gray-600 mb-4">El 75% de los pacientes/clientes investigan online antes de elegir. Sin web, no existís. Con una web profesional, transmitís seriedad desde el primer contacto.</p>
+          <p class="text-gray-600 mb-4">El 75% de los pacientes/eliges investigan online antes de elegir. Sin web, no existís. Con una web profesional, transmitís seriedad desde el primer contacto.</p>
           <div class="savings-badge">
             <i class="fas fa-star mr-1"></i>
             3x más conversiones
           </div>
         </div>
         
-        <!-- Beneficio 5: Reduce cancelaciones -->
-        <div class="benefit-card">
+        <div class="benefit-card gsap-reveal">
           <div class="benefit-icon"><i class="fas fa-bell"></i></div>
           <h4 class="text-xl font-bold text-gray-900 mb-3">Menos cancelaciones de último momento</h4>
           <p class="text-gray-600 mb-4">Los recordatorios automáticos por email reducen las inasistencias hasta un 40%. Cada turno cumplido es dinero que no perdés por un olvido.</p>
@@ -1006,8 +1864,7 @@
           </div>
         </div>
         
-        <!-- Beneficio 6: Escalabilidad -->
-        <div class="benefit-card">
+        <div class="benefit-card gsap-reveal">
           <div class="benefit-icon"><i class="fas fa-rocket"></i></div>
           <h4 class="text-xl font-bold text-gray-900 mb-3">Escalá sin contratar más gente</h4>
           <p class="text-gray-600 mb-4">¿Querés crecer? Con una web podés atender el doble de clientes sin necesidad de contratar. El sistema gestiona todo automáticamente mientras vos te enfocás en tu trabajo.</p>
@@ -1019,37 +1876,11 @@
         
       </div>
       
-      <!-- Cálculo destacado -->
-      <div class="bg-gradient-to-r from-gray-900 to-gray-800 rounded-3xl p-8 md:p-12 text-center text-white relative overflow-hidden">
-        <div class="absolute top-0 right-0 w-64 h-64 bg-orange-500 rounded-full filter blur-3xl opacity-20 -translate-y-1/2 translate-x-1/2"></div>
-        <div class="absolute bottom-0 left-0 w-64 h-64 bg-orange-500 rounded-full filter blur-3xl opacity-20 translate-y-1/2 -translate-x-1/2"></div>
-        
-        <div class="relative z-10">
-          <h3 class="text-2xl md:text-3xl font-bold mb-4">Hagamos números simples</h3>
-          <p class="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
-            Si tu web te trae solo <span class="text-orange-400 font-bold">2 clientes nuevos por mes</span> y cada uno te genera $15.000 ARS, en 2 meses ya pagaste la inversión. El resto es <span class="bg-orange-500 text-white px-2 py-1 rounded font-bold">ganancia pura</span>.
-          </p>
-          
-          <div class="grid md:grid-cols-3 gap-6 max-w-3xl mx-auto mb-8">
-            <div class="bg-white/10 backdrop-blur rounded-2xl p-6">
-              <div class="text-4xl font-black text-orange-400 mb-2">$84.000</div>
-              <div class="text-sm text-gray-400">Inversión única</div>
-            </div>
-            <div class="bg-white/10 backdrop-blur rounded-2xl p-6">
-              <div class="text-4xl font-black text-green-400 mb-2">$30.000</div>
-              <div class="text-sm text-gray-400">+Ingresos/mes (2 clientes)</div>
-            </div>
-            <div class="bg-white/10 backdrop-blur rounded-2xl p-6">
-              <div class="text-4xl font-black text-blue-400 mb-2">2.8</div>
-              <div class="text-sm text-gray-400">Meses para recuperar</div>
-            </div>
-          </div>
-          
-          <a href="https://wa.me/5492604323056?text=Hola!%20Vi%20tu%20web%20y%20quiero%20consultar%20por%20un%20proyecto" target="_blank" rel="noopener noreferrer" class="btn-primary text-lg">
-            <i class="fab fa-whatsapp"></i>
-            Quiero empezar a ahorrar tiempo y dinero
-          </a>
-        </div>
+      <div class="text-center mt-12 gsap-reveal">
+        <a href="#contacto" class="btn-primary text-lg">
+          <i class="fab fa-whatsapp"></i>
+          Consultar gratis
+        </a>
       </div>
     </div>
   </section>
@@ -1057,14 +1888,13 @@
   <!-- PORTFOLIO -->
   <section id="portfolio" class="section-light py-24">
     <div class="max-w-7xl mx-auto px-6">
-      <div class="text-center mb-16">
+      <div class="text-center mb-16 gsap-reveal">
         <h2 class="text-4xl md:text-5xl font-bold mb-4 elegant-title">Proyectos Entregados</h2>
         <p class="text-xl text-gray-600 max-w-2xl mx-auto">Webs reales y funcionando, desplegadas con sistema de turnos integrado.</p>
       </div>
 
-      <!-- PROYECTOS EN VIVO -->
       <div class="mb-8">
-        <div class="flex items-center gap-3 mb-8">
+        <div class="flex items-center gap-3 mb-8 gsap-reveal">
           <span class="relative flex h-4 w-4">
             <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
             <span class="relative inline-flex rounded-full h-4 w-4 bg-green-500"></span>
@@ -1074,9 +1904,7 @@
         </div>
 
         <div class="grid md:grid-cols-2 gap-8">
-
-          <!-- Proyecto 1: Florencia Rosales -->
-          <div class="portfolio-card">
+          <div class="portfolio-card gsap-reveal">
             <div class="preview bg-gradient-to-br from-orange-50 to-orange-100 border-b border-orange-100">
               <div class="text-center p-8">
                 <div class="w-20 h-20 bg-white rounded-2xl shadow-lg flex items-center justify-center text-3xl mx-auto mb-4">
@@ -1095,27 +1923,24 @@
               <div class="flex justify-between items-start mb-3">
                 <div>
                   <h4 class="text-xl font-bold text-gray-900 mb-1">Lic. Florencia Rosales</h4>
-                  <p class="text-sm text-orange-600 font-medium">Psicología • Niños, Adolescentes y Adultos</p>
+                  <p class="text-sm text-orange-600 font-medium">Psicología • La Plata • Niños, Adolescentes y Adultos</p>
                 </div>
                 <span class="bg-orange-100 text-orange-700 text-xs px-2 py-1 rounded-lg font-bold">MP 057074</span>
               </div>
-              <p class="text-gray-600 text-sm mb-4">Sistema completo de reservas con modalidad presencial y virtual. Panel de admin con configuración flexible de horarios cada 10 minutos.</p>
-
+              <p class="text-gray-600 text-sm mb-4">Sistema completo de reservas con modalidad presencial y virtual. Panel de admin con configuración flexible.</p>
               <div class="flex flex-wrap gap-2 mb-4">
                 <span class="tag">Turnos Online</span>
                 <span class="tag">Panel Admin</span>
                 <span class="tag">Responsive</span>
               </div>
-
-              <a href="https://lic-florencia-rosales.vercel.app/" class="btn-portfolio">
+              <a href="https://lic-florencia-rosales.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-portfolio">
                 <span>Visitar Web</span>
                 <i class="fas fa-external-link-alt"></i>
               </a>
             </div>
           </div>
 
-          <!-- Proyecto 2: Salvador -->
-          <div class="portfolio-card">
+          <div class="portfolio-card gsap-reveal">
             <div class="preview bg-gradient-to-br from-blue-50 to-indigo-100 border-b border-blue-100">
               <div class="text-center p-8">
                 <div class="w-20 h-20 bg-white rounded-2xl shadow-lg flex items-center justify-center text-3xl mx-auto mb-4">
@@ -1138,23 +1963,20 @@
                 </div>
                 <span class="bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded-lg font-bold">MN 87014</span>
               </div>
-              <p class="text-gray-600 text-sm mb-4">Sistema inteligente con detección automática de solapamiento de turnos. Si un turno dura 40 min, bloquea automáticamente el horario correspondiente.</p>
-
+              <p class="text-gray-600 text-sm mb-4">Sistema inteligente con detección automática de solapamiento de turnos.</p>
               <div class="flex flex-wrap gap-2 mb-4">
                 <span class="tag">Solapamiento Auto</span>
                 <span class="tag">Virtual/Presencial</span>
                 <span class="tag">Gestión Admin</span>
               </div>
-
-              <a href="https://lic-salvador.vercel.app/" class="btn-portfolio" style="background: #3b82f6;">
+              <a href="https://lic-salvador.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-portfolio" style="background: #3b82f6;">
                 <span>Visitar Web</span>
                 <i class="fas fa-external-link-alt"></i>
               </a>
             </div>
           </div>
 
-          <!-- Proyecto 3: Club de la Bodega -->
-          <div class="portfolio-card">
+          <div class="portfolio-card gsap-reveal">
             <div class="preview bg-gradient-to-br from-amber-50 to-yellow-100 border-b border-amber-100">
               <div class="text-center p-8">
                 <div class="w-20 h-20 bg-white rounded-2xl shadow-lg flex items-center justify-center text-3xl mx-auto mb-4">
@@ -1177,23 +1999,20 @@
                 </div>
                 <span class="bg-amber-100 text-amber-700 text-xs px-2 py-1 rounded-lg font-bold">Tienda Online</span>
               </div>
-              <p class="text-gray-600 text-sm mb-4">Plataforma de venta de vinos con catálogo interactivo, carrito de compras y sistema de reservas para experiencias en bodega.</p>
-
+              <p class="text-gray-600 text-sm mb-4">Plataforma de venta de vinos con catálogo interactivo, carrito de compras y sistema de reservas.</p>
               <div class="flex flex-wrap gap-2 mb-4">
                 <span class="tag">E-commerce</span>
                 <span class="tag">Catálogo</span>
                 <span class="tag">Reservas</span>
               </div>
-
-              <a href="https://club-de-la-bodega.vercel.app/" class="btn-portfolio" style="background: #d97706;">
+              <a href="https://club-de-la-bodega.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-portfolio" style="background: #d97706;">
                 <span>Visitar Web</span>
                 <i class="fas fa-external-link-alt"></i>
               </a>
             </div>
           </div>
 
-          <!-- Proyecto 4: Seven -->
-          <div class="portfolio-card">
+          <div class="portfolio-card gsap-reveal">
             <div class="preview bg-gradient-to-br from-purple-50 to-pink-100 border-b border-purple-100">
               <div class="text-center p-8">
                 <div class="w-20 h-20 bg-white rounded-2xl shadow-lg flex items-center justify-center text-3xl mx-auto mb-4">
@@ -1217,37 +2036,57 @@
                 <span class="bg-purple-100 text-purple-700 text-xs px-2 py-1 rounded-lg font-bold">Peluquería</span>
               </div>
               <p class="text-gray-600 text-sm mb-4">Sistema de reservas para peluquería con catálogo de servicios, selección de estilistas y gestión de horarios.</p>
-
               <div class="flex flex-wrap gap-2 mb-4">
                 <span class="tag">Reservas Online</span>
                 <span class="tag">Estilistas</span>
                 <span class="tag">Servicios</span>
               </div>
-
-              <a href="https://seven-lac-three.vercel.app/" class="btn-portfolio" style="background: #7c3aed;">
+              <a href="https://seven-lac-three.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-portfolio" style="background: #7c3aed;">
                 <span>Visitar Web</span>
                 <i class="fas fa-external-link-alt"></i>
               </a>
             </div>
           </div>
-
         </div>
       </div>
 
+      <div class="text-center mt-12 gsap-reveal">
+        <a href="casos-exito.html" class="btn-secondary text-lg mr-4">
+          <i class="fas fa-chart-bar mr-2"></i>
+          Ver casos de éxito detallados
+        </a>
+      </div>
     </div>
   </section>
 
-  <!-- PRECIOS -->
+  <!-- PRECIOS CON COMPARADOR Y DÓLAR TIEMPO REAL -->
   <section id="precios" class="section-white py-24">
     <div class="max-w-7xl mx-auto px-6">
-      <div class="text-center mb-12">
+      <div class="text-center mb-12 gsap-reveal">
         <h2 class="text-4xl md:text-5xl font-bold mb-4 elegant-title">Inversión</h2>
         <p class="text-xl text-gray-600 max-w-2xl mx-auto">Precios transparentes. Sin costos ocultos.</p>
         
+        <!-- Precio desde destacado -->
+        <div class="mt-6 inline-flex items-center gap-3 bg-orange-100 border-2 border-orange-500 px-6 py-3 rounded-2xl">
+          <i class="fas fa-tag text-orange-600 text-xl"></i>
+          <div class="text-left">
+            <span class="text-orange-700 text-sm font-semibold">Precios desde</span>
+            <span class="text-3xl font-black text-orange-600 ml-2">$60.000 ARS</span>
+          </div>
+        </div>
+        
+        <!-- Dólar tiempo real -->
+        <div class="mt-4 flex justify-center">
+          <div class="dollar-badge" id="dollar-badge">
+            <i class="fas fa-sync-alt" id="dollar-icon"></i>
+            <span id="dollar-text">Cargando cotización...</span>
+          </div>
+        </div>
+        
         <div class="flex justify-center mt-6">
           <div class="exchange-badge">
-            <i class="fas fa-sync-alt"></i>
-            <span>Tipo de cambio referencia: $1.430 ARS = $1 USD (Dólar Blue hoy)</span>
+            <i class="fas fa-info-circle"></i>
+            <span>Actualizado: <span id="last-update">--</span></span>
           </div>
         </div>
         
@@ -1257,13 +2096,20 @@
             <button onclick="showPrices('usd')" id="btn-usd" class="px-6 py-2 rounded-full font-medium text-gray-500 hover:text-gray-900 transition text-sm">Dólares USD</button>
           </div>
         </div>
+        
+        <!-- Botón guardar presupuesto -->
+        <div class="mt-6">
+          <button onclick="guardarPresupuesto()" class="save-budget-btn">
+            <i class="fas fa-file-pdf"></i>
+            Descargar presupuesto en PDF
+          </button>
+        </div>
       </div>
       
-      <!-- LOS 3 PLANES -->
-      <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto items-start">
+      <!-- TARJETAS DE PRECIOS -->
+      <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto items-start mb-16">
         
-        <!-- PLAN 1 -->
-        <div class="card">
+        <div class="card gsap-reveal">
           <div class="mb-6">
             <h4 class="text-gray-500 text-xs font-bold uppercase tracking-wider mb-2">Landing Page</h4>
             <div class="price-ars">
@@ -1271,7 +2117,7 @@
               <span class="text-gray-400 text-lg"> ARS</span>
             </div>
             <div class="price-usd hidden">
-              <span class="price-number">$42</span>
+              <span class="price-number" data-ars="60000">--</span>
               <span class="text-gray-400 text-lg"> USD</span>
             </div>
           </div>
@@ -1286,13 +2132,12 @@
             <li><i class="fas fa-times text-red-400"></i><span class="text-gray-400">Sistema de turnos</span></li>
           </ul>
           
-          <a href="https://wa.me/5492604323056?text=Hola!%20Me%20interesa%20el%20Plan%20Landing%20Page" target="_blank" rel="noopener noreferrer" class="block w-full border-2 border-gray-200 text-gray-700 text-center py-3 rounded-xl font-bold hover:border-orange-500 hover:text-orange-600 transition">
+          <a href="#contacto" class="block w-full border-2 border-gray-200 text-gray-700 text-center py-3 rounded-xl font-bold hover:border-orange-500 hover:text-orange-600 transition">
             Consultar
           </a>
         </div>
         
-        <!-- PLAN 2 DESTACADO -->
-        <div class="plan-featured">
+        <div class="plan-featured gsap-scale">
           <div class="mb-6">
             <h4>Con Turnos</h4>
             <div class="price-ars">
@@ -1300,7 +2145,7 @@
               <span class="text-orange-400 text-lg"> ARS</span>
             </div>
             <div class="price-usd hidden">
-              <span class="price-number">$59</span>
+              <span class="price-number" data-ars="84000">--</span>
               <span class="text-orange-400 text-lg"> USD</span>
             </div>
           </div>
@@ -1315,13 +2160,12 @@
             <li><i class="fas fa-check"></i><span>Notificaciones por email</span></li>
           </ul>
           
-          <a href="https://wa.me/5492604323056?text=Hola!%20Me%20interesa%20el%20Plan%20Con%20Turnos" target="_blank" rel="noopener noreferrer" class="block w-full bg-orange-500 text-black text-center py-3 rounded-xl font-bold hover:bg-orange-400 transition">
+          <a href="#contacto" class="block w-full bg-orange-500 text-black text-center py-3 rounded-xl font-bold hover:bg-orange-400 transition">
             Elegir Plan
           </a>
         </div>
         
-        <!-- PLAN 3 -->
-        <div class="card">
+        <div class="card gsap-reveal">
           <div class="mb-6">
             <h4 class="text-gray-500 text-xs font-bold uppercase tracking-wider mb-2">Premium</h4>
             <div class="price-ars">
@@ -1329,7 +2173,7 @@
               <span class="text-gray-400 text-lg"> ARS</span>
             </div>
             <div class="price-usd hidden">
-              <span class="price-number">$84</span>
+              <span class="price-number" data-ars="120000">--</span>
               <span class="text-gray-400 text-lg"> USD</span>
             </div>
           </div>
@@ -1341,55 +2185,122 @@
             <li><i class="fas fa-check text-green-500"></i><span>Múltiples profesionales</span></li>
             <li><i class="fas fa-check text-green-500"></i><span>Pagos online integrados</span></li>
             <li><i class="fas fa-check text-green-500"></i><span>WhatsApp API</span></li>
-            <li><i class="fas fa-check text-green-500"></i><span>Soporte prioritario 6 meses</span></li>
+            <li><i class="fas fa-check text-green-500"></i><span>6 meses sin costo de mantenimiento</span></li>
           </ul>
           
-          <a href="https://wa.me/5492604323056?text=Hola!%20Me%20interesa%20el%20Plan%20Premium" target="_blank" rel="noopener noreferrer" class="block w-full border-2 border-gray-200 text-gray-700 text-center py-3 rounded-xl font-bold hover:border-orange-500 hover:text-orange-600 transition">
+          <a href="#contacto" class="block w-full border-2 border-gray-200 text-gray-700 text-center py-3 rounded-xl font-bold hover:border-orange-500 hover:text-orange-600 transition">
             Consultar
           </a>
         </div>
         
       </div>
       
-      <!-- SOPORTE -->
-      <div class="text-center mt-12 p-6 bg-gray-50 rounded-2xl max-w-2xl mx-auto border border-gray-200">
+      <!-- TABLA COMPARATIVA -->
+      <div class="max-w-4xl mx-auto gsap-reveal">
+        <h3 class="text-2xl font-bold text-center mb-8">Comparador de planes</h3>
+        <div class="overflow-x-auto">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Característica</th>
+                <th>Landing</th>
+                <th class="plan-highlight">Con Turnos</th>
+                <th>Premium</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Diseño personalizado</td>
+                <td><i class="fas fa-check check-green"></i></td>
+                <td class="plan-highlight"><i class="fas fa-check check-green"></i></td>
+                <td><i class="fas fa-check check-green"></i></td>
+              </tr>
+              <tr>
+                <td>Responsive (Mobile)</td>
+                <td><i class="fas fa-check check-green"></i></td>
+                <td class="plan-highlight"><i class="fas fa-check check-green"></i></td>
+                <td><i class="fas fa-check check-green"></i></td>
+              </tr>
+              <tr>
+                <td>Sistema de turnos</td>
+                <td><i class="fas fa-times check-red"></i></td>
+                <td class="plan-highlight"><i class="fas fa-check check-green"></i></td>
+                <td><i class="fas fa-check check-green"></i></td>
+              </tr>
+              <tr>
+                <td>Panel de administración</td>
+                <td><i class="fas fa-times check-red"></i></td>
+                <td class="plan-highlight"><i class="fas fa-check check-green"></i></td>
+                <td><i class="fas fa-check check-green"></i></td>
+              </tr>
+              <tr>
+                <td>Múltiples profesionales</td>
+                <td><i class="fas fa-times check-red"></i></td>
+                <td class="plan-highlight"><i class="fas fa-times check-red"></i></td>
+                <td><i class="fas fa-check check-green"></i></td>
+              </tr>
+              <tr>
+                <td>Pagos online</td>
+                <td><i class="fas fa-times check-red"></i></td>
+                <td class="plan-highlight"><i class="fas fa-times check-red"></i></td>
+                <td><i class="fas fa-check check-green"></i></td>
+              </tr>
+              <tr>
+                <td>Mantenimiento</td>
+                <td>$20-30 USD/mes</td>
+                <td class="plan-highlight">$20-30 USD/mes</td>
+                <td>6 meses incluidos</td>
+              </tr>
+              <tr>
+                <td class="font-bold">Precio</td>
+                <td class="font-bold">$60.000</td>
+                <td class="plan-highlight font-bold text-orange-600">$84.000</td>
+                <td class="font-bold">$120.000</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      
+      <div class="text-center mt-12 p-6 bg-gray-50 rounded-2xl max-w-2xl mx-auto border border-gray-200 gsap-reveal">
         <div class="flex items-center justify-center gap-2 mb-2">
           <i class="fas fa-headset text-orange-500"></i>
-          <span class="font-bold text-gray-900">Soporte mensual accesible</span>
+          <span class="font-bold text-gray-900">Mantenimiento mensual</span>
         </div>
         <p class="text-gray-600">
-          Desde <span class="text-orange-600 font-bold">$14.300 ARS</span> hasta <span class="text-orange-600 font-bold">$28.600 ARS</span> 
-          ($10-$20 USD) según tus necesidades
+          Soporte técnico y actualizaciones: <span class="text-orange-600 font-bold">$20-30 USD</span> mensual 
+          (aproximadamente $28.600-$42.900 ARS)
         </p>
       </div>
     </div>
   </section>
 
-  <!-- PROCESO -->
+
+  <!-- PROCESO DE TRABAJO -->
   <section class="section-light py-24">
     <div class="max-w-6xl mx-auto px-6">
-      <div class="text-center mb-16">
+      <div class="text-center mb-16 gsap-reveal">
         <h2 class="text-4xl md:text-5xl font-bold mb-4 elegant-title">¿Cómo trabajamos?</h2>
         <p class="text-xl text-gray-600 max-w-2xl mx-auto">Proceso simple y transparente. De tu idea a la web en línea en 7 días.</p>
       </div>
       
       <div class="grid md:grid-cols-4 gap-8">
-        <div class="text-center">
+        <div class="text-center gsap-reveal">
           <div class="step-number">1</div>
           <h4 class="font-bold text-gray-900 mb-2">Consulta</h4>
           <p class="text-gray-600 text-sm">Hablamos de tu negocio y objetivos sin compromiso.</p>
         </div>
-        <div class="text-center">
+        <div class="text-center gsap-reveal">
           <div class="step-number" style="background: #3b82f6;">2</div>
-          <h4 class="font-bold text-gray-900 mb-2">Propuesta</h4>
-          <p class="text-gray-600 text-sm">Diseño y presupuesto personalizado para vos.</p>
+          <h4 class="font-bold text-gray-900 mb-2">Diseño</h4>
+          <p class="text-gray-600 text-sm">Creamos un diseño personalizado según tu marca.</p>
         </div>
-        <div class="text-center">
+        <div class="text-center gsap-reveal">
           <div class="step-number" style="background: #10b981;">3</div>
-          <h4 class="font-bold text-gray-900 mb-2">Desarrollo</h4>
-          <p class="text-gray-600 text-sm">Actualizaciones cada 48hs para que veas el progreso.</p>
+          <h4 class="font-bold text-gray-900 mb-2">Revisión</h4>
+          <p class="text-gray-600 text-sm">Ves el progreso y solicitas los ajustes que necesites.</p>
         </div>
-        <div class="text-center">
+        <div class="text-center gsap-reveal">
           <div class="step-number" style="background: #8b5cf6;">4</div>
           <h4 class="font-bold text-gray-900 mb-2">Entrega</h4>
           <p class="text-gray-600 text-sm">Tu web online con capacitación incluida.</p>
@@ -1401,12 +2312,12 @@
   <!-- FAQ -->
   <section id="faq" class="section-white py-24">
     <div class="max-w-3xl mx-auto px-6">
-      <div class="text-center mb-16">
+      <div class="text-center mb-16 gsap-reveal">
         <h2 class="text-4xl font-bold mb-4 elegant-title">Preguntas Frecuentes</h2>
         <p class="text-xl text-gray-600">Todo lo que necesitás saber antes de empezar.</p>
       </div>
       
-      <details>
+      <details class="gsap-reveal">
         <summary>
           <span>¿Cuánto tiempo tarda en estar lista la web?</span>
           <i class="fas fa-chevron-down"></i>
@@ -1414,7 +2325,7 @@
         <div>Entre 5 y 7 días hábiles desde que confirmás el proyecto. Si necesitás algo urgente, consultá por entrega express (3-4 días con recargo del 20%).</div>
       </details>
       
-      <details>
+      <details class="gsap-reveal">
         <summary>
           <span>¿Necesito tener dominio y hosting?</span>
           <i class="fas fa-chevron-down"></i>
@@ -1422,7 +2333,7 @@
         <div>No es necesario. Ofrezco hosting a <strong class="text-orange-600">precio accesible según tu necesidad</strong>. Si querés un dominio personalizado, te guío en la compra (costo aparte, unos $15-20 USD/año).</div>
       </details>
       
-      <details>
+      <details class="gsap-reveal">
         <summary>
           <span>¿Puedo modificar los turnos una vez entregada?</span>
           <i class="fas fa-chevron-down"></i>
@@ -1430,15 +2341,15 @@
         <div>¡Por supuesto! El panel de administración te permite gestionar tu disponibilidad en cualquier momento. Es 100% autogestionable.</div>
       </details>
       
-      <details>
+      <details class="gsap-reveal">
         <summary>
           <span>¿Qué pasa después de los 30 días de garantía?</span>
           <i class="fas fa-chevron-down"></i>
         </summary>
-        <div>Ofrezco planes de mantenimiento mensual <strong class="text-orange-600">accesibles desde $14.300 a $28.600 ARS</strong> ($10-$20 USD) que incluyen soporte técnico y actualizaciones.</div>
+        <div>El mantenimiento mensual con soporte técnico y actualizaciones tiene un costo de <strong class="text-orange-600">$20-30 USD</strong> (aproximadamente $28.600-$42.900 ARS según cotización).</div>
       </details>
       
-      <details>
+      <details class="gsap-reveal">
         <summary>
           <span>¿Cómo se realiza el pago?</span>
           <i class="fas fa-chevron-down"></i>
@@ -1448,24 +2359,103 @@
     </div>
   </section>
 
-  <!-- CTA -->
+  <!-- FORMULARIO DE CONTACTO -->
+  <section id="contacto" class="section-light py-24">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-16 gsap-reveal">
+        <h2 class="text-4xl md:text-5xl font-bold mb-4 elegant-title">¿Listo para tu nueva web?</h2>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">Completá el formulario y te contactamos en menos de 24 horas.</p>
+      </div>
+      
+      <div class="bg-white rounded-3xl shadow-xl border border-gray-200 p-8 md:p-12 gsap-scale">
+        <form action="https://formsubmit.co/FranYTTT@gmail.com" method="POST" class="space-y-6" id="contact-form">
+          <input type="hidden" name="_subject" value="Nueva consulta desde ZafiroWeb">
+          <input type="hidden" name="_next" value="https://zafiroweb.com/gracias.html">
+          <input type="hidden" name="_captcha" value="false">
+          
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="form-group">
+              <label for="nombre">Nombre completo *</label>
+              <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" required placeholder="tu@email.com">
+            </div>
+          </div>
+          
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="form-group">
+              <label for="telefono">Teléfono / WhatsApp *</label>
+              <input type="tel" id="telefono" name="telefono" required placeholder="+54 9 XX XXXX XXXX">
+            </div>
+            
+            <div class="form-group">
+              <label for="tipo-proyecto">Tipo de proyecto *</label>
+              <select id="tipo-proyecto" name="tipo_proyecto" required>
+                <option value="">Seleccioná una opción</option>
+                <option value="landing">Landing Page ($60.000 ARS)</option>
+                <option value="turnos">Web con Sistema de Turnos ($84.000 ARS)</option>
+                <option value="premium">Plan Premium ($120.000 ARS)</option>
+                <option value="ecommerce">Tienda Online (Consultar)</option>
+                <option value="otro">Otro / No estoy seguro</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="mensaje">Contanos sobre tu proyecto *</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required placeholder="¿Qué tipo de negocio tenés? ¿Qué necesitás? ¿Tenés alguna web de referencia que te guste?"></textarea>
+          </div>
+          
+          <div class="form-group">
+            <label class="flex items-start gap-2 cursor-pointer">
+              <input type="checkbox" name="newsletter" class="mt-1">
+              <span class="text-sm text-gray-600">Quiero recibir tips y novedades sobre marketing digital (opcional)</span>
+            </label>
+          </div>
+          
+          <button type="submit" class="btn-primary w-full justify-center text-lg py-4">
+            <i class="fas fa-paper-plane"></i>
+            Enviar consulta
+          </button>
+          
+          <p class="text-center text-sm text-gray-500 mt-4">
+            <i class="fas fa-lock mr-1"></i>
+            Tu información está protegida. Respondemos en menos de 24hs.
+          </p>
+        </form>
+      </div>
+      
+      <div class="text-center mt-8 gsap-reveal">
+        <p class="text-gray-600 mb-4">¿Preferís escribir por WhatsApp?</p>
+        <a href="https://wa.me/5492604323056?text=Hola!%20Vi%20tu%20web%20y%20quiero%20consultar%20por%20un%20proyecto" target="_blank" rel="noopener noreferrer" class="btn-secondary text-lg">
+          <i class="fab fa-whatsapp text-green-600 mr-2"></i>
+          Escribir por WhatsApp directo
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
   <section class="cta-section py-24">
     <div class="max-w-4xl mx-auto px-6 text-center">
-      <h2 class="text-4xl md:text-5xl font-bold mb-6 text-white elegant-title">¿Listo para tu nueva web?</h2>
-      <p class="text-xl text-gray-300 mb-10">Agendá una consulta gratuita de 15 minutos. Sin compromiso, te explico cómo podemos llevar tu negocio al siguiente nivel.</p>
+      <h2 class="text-4xl md:text-5xl font-bold mb-6 text-white elegant-title gsap-reveal">Tu web profesional te espera</h2>
+      <p class="text-xl text-gray-300 mb-10 gsap-reveal">No dejes pasar más tiempo. Cada día sin web es un cliente que va con tu competencia.</p>
       
-      <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-        <a href="https://wa.me/5492604323056?text=Hola!%20Vi%20tu%20web%20y%20quiero%20consultar%20por%20un%20proyecto" target="_blank" rel="noopener noreferrer" class="bg-white text-orange-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition shadow-xl inline-flex items-center justify-center gap-2">
+      <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12 gsap-scale">
+        <a href="#contacto" class="bg-orange-500 text-black px-8 py-4 rounded-full font-bold text-lg hover:bg-orange-400 transition shadow-xl inline-flex items-center justify-center gap-2">
           <i class="fab fa-whatsapp text-xl"></i>
-          Escribir por WhatsApp
+          Consultar gratis ahora
         </a>
-        <a href="mailto:FranYTTT@gmail.com" class="border-2 border-gray-600 text-gray-300 px-8 py-4 rounded-full font-bold hover:bg-white/5 transition inline-flex items-center justify-center gap-2">
-          <i class="fas fa-envelope"></i>
-          Enviar Email
+        <a href="#precios" class="border-2 border-gray-600 text-gray-300 px-8 py-4 rounded-full font-bold hover:bg-white/5 transition inline-flex items-center justify-center gap-2">
+          <i class="fas fa-tag"></i>
+          Ver precios
         </a>
       </div>
       
-      <div class="flex items-center justify-center gap-8 text-sm text-gray-400">
+      <div class="flex items-center justify-center gap-8 text-sm text-gray-400 gsap-reveal">
         <div class="flex items-center gap-2">
           <i class="fas fa-check-circle text-green-400"></i>
           <span>Respuesta en 2 horas</span>
@@ -1473,6 +2463,10 @@
         <div class="flex items-center gap-2">
           <i class="fas fa-check-circle text-green-400"></i>
           <span>Presupuesto sin cargo</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <i class="fas fa-check-circle text-green-400"></i>
+          <span>Sin compromiso</span>
         </div>
       </div>
     </div>
@@ -1533,11 +2527,21 @@
         <div>
           <h5>Redes</h5>
           <div class="flex gap-3">
-            <a href="https://www.instagram.com/caro_frann" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-orange-500 hover:text-black transition text-gray-400" aria-label="Instagram">
+            <a href="https://www.instagram.com/zafiro.desarrolloweb/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-orange-500 hover:text-black transition text-gray-400" aria-label="Instagram">
               <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61574357000256" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-orange-500 hover:text-black transition text-gray-400" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
             </a>
             <a href="#" onclick="alert('Perfil de GitHub en construcción. Contactame por WhatsApp o Instagram.')" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-orange-500 hover:text-black transition text-gray-400" aria-label="GitHub">
               <i class="fab fa-github"></i>
+            </a>
+          </div>
+          
+          <div class="mt-6">
+            <a href="#contacto" class="btn-primary text-sm w-full justify-center">
+              <i class="fab fa-whatsapp"></i>
+              Consultar gratis
             </a>
           </div>
         </div>
@@ -1549,81 +2553,114 @@
     </div>
   </footer>
 
+  <!-- STICKY CTA INTELIGENTE -->
+  <div class="sticky-cta" id="sticky-cta">
+    <div class="sticky-cta-content">
+      <div class="hidden md:block">
+        <p class="font-bold text-gray-900">¿Te quedó alguna duda?</p>
+        <p class="text-sm text-gray-600">Estoy para ayudarte con tu proyecto</p>
+      </div>
+      <a href="https://wa.me/5492604323056?text=Hola!%20Tengo%20una%20consulta%20sobre%20las%20webs" target="_blank" rel="noopener noreferrer" class="btn-primary text-sm">
+        <i class="fab fa-whatsapp"></i>
+        Escribir por WhatsApp
+      </a>
+    </div>
+  </div>
+
+  <!-- BOTÓN FLOTANTE WHATSAPP -->
+  <a href="https://wa.me/5492604323056?text=Hola!%20Vi%20tu%20web%20y%20quiero%20consultar%20por%20un%20proyecto" 
+     target="_blank" 
+     rel="noopener noreferrer" 
+     class="whatsapp-float"
+     aria-label="Contactar por WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- CHATBOT -->
+  <div class="chatbot-toggle" id="chatbot-toggle" onclick="toggleChatbot()">
+    <i class="fas fa-comments"></i>
+  </div>
+  
+  <div class="chatbot-container" id="chatbot-container">
+    <div class="chatbot-header">
+      <h4><i class="fas fa-robot mr-2"></i>Asistente ZafiroWeb</h4>
+      <button class="chatbot-close" onclick="toggleChatbot()">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    <div class="chatbot-messages" id="chatbot-messages">
+      <div class="chatbot-message bot">
+        ¡Hola! 👋 Soy tu asistente virtual. ¿En qué puedo ayudarte hoy?
+      </div>
+    </div>
+    <div class="chatbot-options" id="chatbot-options">
+      <button class="chatbot-option" onclick="handleChatOption('precios')">💰 Precios</button>
+      <button class="chatbot-option" onclick="handleChatOption('tiempo')">⏱️ Tiempo de entrega</button>
+      <button class="chatbot-option" onclick="handleChatOption('pagos')">💳 Formas de pago</button>
+      <button class="chatbot-option" onclick="handleChatOption('turnos')">📅 Sistema de turnos</button>
+      <button class="chatbot-option" onclick="handleChatOption('contacto')">📞 Contactar humano</button>
+    </div>
+  </div>
+
+  <!-- POP-UP DE SALIDA -->
+  <div class="exit-popup" id="exit-popup">
+    <div class="exit-popup-content">
+      <button class="exit-popup-close" onclick="closeExitPopup()">
+        <i class="fas fa-times"></i>
+      </button>
+      
+      <div class="mb-6">
+        <div class="w-20 h-20 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
+          <i class="fas fa-question text-4xl text-black"></i>
+        </div>
+        <h3 class="text-2xl font-bold text-white mb-2">¿Te quedó alguna duda?</h3>
+        <p class="text-gray-400">Estoy para ayudarte. Escribime por WhatsApp y te respondo en minutos.</p>
+      </div>
+      
+      <a href="https://wa.me/5492604323056?text=Hola!%20Tengo%20una%20consulta%20sobre%20las%20webs" 
+         target="_blank" 
+         rel="noopener noreferrer"
+         class="btn-primary w-full justify-center text-lg"
+         onclick="closeExitPopup()">
+        <i class="fab fa-whatsapp"></i>
+        Escribir por WhatsApp
+      </a>
+      
+      <button onclick="closeExitPopup()" class="mt-4 text-gray-500 hover:text-white transition text-sm">
+        No, gracias
+      </button>
+    </div>
+  </div>
+
   <script>
-    // Crear partículas sutiles en el hero
-    function createParticles() {
-      const container = document.getElementById('particles');
-      if (!container) return;
+    // ===================== MODO OSCURO =====================
+    function toggleTheme() {
+      const html = document.documentElement;
+      const icon = document.getElementById('theme-icon');
+      const currentTheme = html.getAttribute('data-theme');
+      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
       
-      const particleCount = 25;
+      html.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
       
-      for (let i = 0; i < particleCount; i++) {
-        const particle = document.createElement('div');
-        particle.className = 'particle';
-        particle.style.left = Math.random() * 100 + '%';
-        particle.style.animationDelay = Math.random() * 15 + 's';
-        particle.style.animationDuration = (10 + Math.random() * 10) + 's';
-        particle.style.opacity = 0.2 + Math.random() * 0.3;
-        
-        // Algunas partículas más grandes pero muy transparentes
-        if (Math.random() > 0.8) {
-          particle.style.width = '6px';
-          particle.style.height = '6px';
-        }
-        
-        container.appendChild(particle);
+      if (newTheme === 'dark') {
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+      } else {
+        icon.classList.remove('fa-sun');
+        icon.classList.add('fa-moon');
       }
     }
     
-    // Animación de elementos al hacer scroll
-    function setupScrollAnimations() {
-      const observerOptions = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.1
-      };
-      
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            
-            // Animar líneas decorativas si existen
-            const lines = entry.target.querySelectorAll('.animated-line');
-            lines.forEach(line => line.classList.add('visible'));
-          }
-        });
-      }, observerOptions);
-      
-      // Observar elementos con clase fade-in-up
-      document.querySelectorAll('.fade-in-up, .stat-number').forEach(el => {
-        observer.observe(el);
-      });
+    // Restaurar tema guardado
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    if (savedTheme === 'dark') {
+      document.getElementById('theme-icon').classList.remove('fa-moon');
+      document.getElementById('theme-icon').classList.add('fa-sun');
     }
-    
-    // Efecto de parallax muy sutil en hero
-    function setupParallax() {
-      const hero = document.querySelector('.hero-section');
-      if (!hero) return;
-      
-      window.addEventListener('scroll', () => {
-        const scrolled = window.pageYOffset;
-        const rate = scrolled * 0.3;
-        
-        if (scrolled < window.innerHeight) {
-          hero.style.backgroundPosition = `center ${rate}px`;
-        }
-      }, { passive: true });
-    }
-    
-    // Inicializar todo
-    document.addEventListener('DOMContentLoaded', () => {
-      createParticles();
-      setupScrollAnimations();
-      setupParallax();
-    });
-    
-    // Navbar scroll
+
+    // ===================== NAVBAR SCROLL =====================
     window.addEventListener('scroll', () => {
       const navbar = document.getElementById('navbar');
       const logoText = document.querySelector('.navbar-logo-text');
@@ -1639,7 +2676,7 @@
       }
     });
     
-    // Mobile menu toggle
+    // ===================== MOBILE MENU =====================
     const mobileToggle = document.getElementById('mobile-toggle');
     const mobileMenu = document.getElementById('mobile-menu');
     
@@ -1655,7 +2692,6 @@
       }
     });
     
-    // Cerrar menú móvil al hacer click en un enlace
     document.querySelectorAll('.mobile-menu a').forEach(link => {
       link.addEventListener('click', () => {
         mobileMenu.classList.remove('active');
@@ -1664,7 +2700,7 @@
       });
     });
     
-    // Typing effect
+    // ===================== TYPING EFFECT =====================
     const words = ['venden', 'conectan', 'crecen', 'destacan'];
     let wordIndex = 0, charIndex = 0, isDeleting = false;
     
@@ -1695,7 +2731,7 @@
     }
     setTimeout(type, 1000);
     
-    // Prices toggle
+    // ===================== PRICES TOGGLE =====================
     function showPrices(currency) {
       const ars = document.querySelectorAll('.price-ars');
       const usd = document.querySelectorAll('.price-usd');
@@ -1718,6 +2754,396 @@
         btnArs.classList.add('text-gray-500');
       }
     }
+    
+    // ===================== CALCULADORA ROI =====================
+    function calcularROI() {
+      const clientes = parseInt(document.getElementById('clientes-semana').value) || 0;
+      const precio = parseInt(document.getElementById('precio-servicio').value) || 0;
+      const perdidos = parseInt(document.getElementById('turnos-perdidos').value) || 0;
+      
+      if (clientes === 0 || precio === 0) {
+        alert('Por favor completá al menos los clientes por semana y el precio del servicio.');
+        return;
+      }
+      
+      const inversion = 84000; // Precio plan con turnos
+      const gananciaPerdidaSemanal = perdidos * precio;
+      const gananciaPerdidaMensual = gananciaPerdidaSemanal * 4;
+      const diasParaRecuperar = Math.ceil(inversion / (gananciaPerdidaMensual / 30));
+      
+      document.getElementById('calculator-placeholder').style.display = 'none';
+      document.getElementById('calculator-result').style.display = 'block';
+      document.getElementById('dias-retorno').textContent = diasParaRecuperar <= 0 ? 'Inmediato' : diasParaRecuperar;
+      document.getElementById('ganancia-mensual').textContent = '$' + gananciaPerdidaMensual.toLocaleString('es-AR') + ' ARS';
+      
+      // Animar el número
+      gsap.from('#dias-retorno', {
+        textContent: 0,
+        duration: 1.5,
+        ease: 'power1.out',
+        snap: { textContent: 1 }
+      });
+    }
+    
+    // ===================== BEFORE/AFTER SLIDER =====================
+    const slider = document.getElementById('before-after-slider');
+    const afterImg = document.getElementById('after-img');
+    const handle = document.getElementById('slider-handle');
+    let isDragging = false;
+    
+    function updateSlider(x) {
+      const rect = slider.getBoundingClientRect();
+      let percentage = ((x - rect.left) / rect.width) * 100;
+      percentage = Math.max(0, Math.min(100, percentage));
+      
+      afterImg.style.width = percentage + '%';
+      handle.style.left = percentage + '%';
+    }
+    
+    handle.addEventListener('mousedown', () => isDragging = true);
+    document.addEventListener('mouseup', () => isDragging = false);
+    document.addEventListener('mousemove', (e) => {
+      if (isDragging) updateSlider(e.clientX);
+    });
+    
+    // Touch support
+    handle.addEventListener('touchstart', () => isDragging = true);
+    document.addEventListener('touchend', () => isDragging = false);
+    document.addEventListener('touchmove', (e) => {
+      if (isDragging) updateSlider(e.touches[0].clientX);
+    });
+    
+    // ===================== CARRUSEL TESTIMONIOS =====================
+    const carousel = document.getElementById('testimonials-carousel');
+    const dots = document.querySelectorAll('.carousel-dot');
+    
+    if (carousel) {
+      carousel.addEventListener('scroll', () => {
+        const scrollLeft = carousel.scrollLeft;
+        const cardWidth = carousel.querySelector('.testimonial-card').offsetWidth + 24; // gap
+        const activeIndex = Math.round(scrollLeft / cardWidth);
+        
+        dots.forEach((dot, index) => {
+          dot.classList.toggle('active', index === activeIndex);
+        });
+      });
+      
+      dots.forEach(dot => {
+        dot.addEventListener('click', () => {
+          const index = parseInt(dot.dataset.index);
+          const cardWidth = carousel.querySelector('.testimonial-card').offsetWidth + 24;
+          carousel.scrollTo({ left: index * cardWidth, behavior: 'smooth' });
+        });
+      });
+    }
+    
+    // ===================== STICKY CTA =====================
+    const stickyCta = document.getElementById('sticky-cta');
+    let lastScroll = 0;
+    
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.scrollY;
+      const heroHeight = document.querySelector('.hero-section').offsetHeight;
+      const contactSection = document.getElementById('contacto');
+      const contactTop = contactSection.offsetTop;
+      
+      // Mostrar después del hero, ocultar en contacto
+      if (currentScroll > heroHeight && currentScroll < contactTop - window.innerHeight) {
+        stickyCta.classList.add('visible');
+      } else {
+        stickyCta.classList.remove('visible');
+      }
+      
+      lastScroll = currentScroll;
+    });
+    
+    // ===================== CHATBOT =====================
+    function toggleChatbot() {
+      const chatbot = document.getElementById('chatbot-container');
+      const toggle = document.getElementById('chatbot-toggle');
+      chatbot.classList.toggle('open');
+      toggle.classList.toggle('hidden');
+    }
+    
+    function handleChatOption(option) {
+      const messages = document.getElementById('chatbot-messages');
+      const options = {
+        'precios': 'Nuestros planes van desde $60.000 ARS (Landing) hasta $120.000 ARS (Premium). Todos incluyen diseño personalizado. ¿Te gustaría saber más de algún plan en particular?',
+        'tiempo': 'La entrega es en 7 días hábiles desde que confirmás el proyecto. Si necesitás urgente, tenemos opción express (3-4 días).',
+        'pagos': 'El pago es 50% al confirmar y 50% al entregar. Aceptamos transferencia, MercadoPago, PayPal, Wise o USDT.',
+        'turnos': 'El sistema de turnos permite a tus clientes reservar directo desde tu web. Incluye panel de admin, notificaciones automáticas y gestión de disponibilidad.',
+        'contacto': 'Te voy a redirigir al formulario de contacto para que hables directamente con un humano...'
+      };
+      
+      // Agregar mensaje del usuario
+      const userMsg = document.createElement('div');
+      userMsg.className = 'chatbot-message user';
+      userMsg.textContent = document.querySelector(`[onclick="handleChatOption('${option}')"]`).textContent;
+      messages.appendChild(userMsg);
+      
+      // Respuesta del bot
+      setTimeout(() => {
+        const botMsg = document.createElement('div');
+        botMsg.className = 'chatbot-message bot';
+        botMsg.textContent = options[option];
+        messages.appendChild(botMsg);
+        messages.scrollTop = messages.scrollHeight;
+        
+        if (option === 'contacto') {
+          setTimeout(() => {
+            document.getElementById('contacto').scrollIntoView({ behavior: 'smooth' });
+          }, 1000);
+        }
+      }, 500);
+      
+      messages.scrollTop = messages.scrollHeight;
+    }
+    
+    // ===================== PRECIO DÓLAR TIEMPO REAL =====================
+    let dollarRate = 1430; // Valor por defecto
+    
+    async function fetchDollarRate() {
+      const badge = document.getElementById('dollar-badge');
+      const icon = document.getElementById('dollar-icon');
+      const text = document.getElementById('dollar-text');
+      const lastUpdate = document.getElementById('last-update');
+      
+      icon.classList.add('updating');
+      
+      try {
+        // Usar API de bluelytics para cotización del dólar blue
+        const response = await fetch('https://api.bluelytics.com.ar/v2/latest');
+        const data = await response.json();
+        dollarRate = data.blue.value_avg;
+        
+        text.textContent = `Dólar Blue: $${dollarRate.toLocaleString('es-AR')} ARS`;
+        lastUpdate.textContent = new Date().toLocaleTimeString('es-AR', { hour: '2-digit', minute: '2-digit' });
+        
+        // Actualizar precios en USD
+        document.querySelectorAll('.price-number[data-ars]').forEach(el => {
+          const ars = parseInt(el.dataset.ars);
+          const usd = Math.round(ars / dollarRate);
+          el.textContent = '$' + usd;
+        });
+      } catch (error) {
+        text.textContent = `Dólar Blue: $${dollarRate.toLocaleString('es-AR')} ARS (estimado)`;
+        lastUpdate.textContent = 'Actualización fallida';
+      }
+      
+      icon.classList.remove('updating');
+    }
+    
+    // Cargar cotización al inicio
+    fetchDollarRate();
+    // Actualizar cada 5 minutos
+    setInterval(fetchDollarRate, 300000);
+    
+    // ===================== GUARDAR PRESUPUESTO =====================
+    function guardarPresupuesto() {
+      // Crear contenido del PDF simulado
+      const contenido = `
+PRESUPUESTO ZAFIROWEB
+====================
+
+Fecha: ${new Date().toLocaleDateString('es-AR')}
+
+PLANES DISPONIBLES:
+
+1. LANDING PAGE
+   Precio: $60.000 ARS
+   Incluye:
+   - Diseño personalizado único
+   - Responsive mobile-first
+   - Formulario de contacto
+   - SEO básico
+
+2. CON TURNOS (RECOMENDADO)
+   Precio: $84.000 ARS
+   Incluye:
+   - Todo del plan Landing
+   - Sistema de turnos completo
+   - Panel de administración
+   - Múltiples secciones
+   - Notificaciones por email
+
+3. PREMIUM
+   Precio: $120.000 ARS
+   Incluye:
+   - Todo del plan Con Turnos
+   - Múltiples profesionales
+   - Pagos online integrados
+   - WhatsApp API
+   - 6 meses sin costo de mantenimiento
+
+MANTENIMIENTO MENSUAL: $20-30 USD (soporte + actualizaciones)
+
+Contacto:
+WhatsApp: +54 9 260 432-3056
+Email: FranYTTT@gmail.com
+
+* Precios actualizados al ${new Date().toLocaleDateString('es-AR')}
+* Cotización dólar: $${dollarRate.toLocaleString('es-AR')} ARS
+      `;
+      
+      // Crear blob y descargar
+      const blob = new Blob([contenido], { type: 'text/plain' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `Presupuesto_ZafiroWeb_${new Date().toISOString().split('T')[0]}.txt`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+      
+      // Tracking
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'download', { event_category: 'Budget', event_label: 'PDF Download' });
+      }
+    }
+    
+    // ===================== POP-UP DE SALIDA =====================
+    let exitPopupShown = false;
+    const exitPopup = document.getElementById('exit-popup');
+    
+    function closeExitPopup() {
+      exitPopup.classList.remove('active');
+    }
+    
+    document.addEventListener('mouseleave', (e) => {
+      if (e.clientY < 0 && !exitPopupShown) {
+        exitPopup.classList.add('active');
+        exitPopupShown = true;
+      }
+    });
+    
+    exitPopup.addEventListener('click', (e) => {
+      if (e.target === exitPopup) {
+        closeExitPopup();
+      }
+    });
+    
+    // ===================== GSAP ANIMATIONS =====================
+    gsap.registerPlugin(ScrollTrigger);
+    
+    // Animaciones de revelado
+    gsap.utils.toArray('.gsap-reveal').forEach(element => {
+      gsap.fromTo(element, 
+        { opacity: 0, y: 30 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: element,
+            start: 'top 85%',
+            toggleActions: 'play none none none'
+          }
+        }
+      );
+    });
+    
+    // Animaciones desde izquierda
+    gsap.utils.toArray('.gsap-reveal-left').forEach(element => {
+      gsap.fromTo(element,
+        { opacity: 0, x: -50 },
+        {
+          opacity: 1,
+          x: 0,
+          duration: 0.8,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: element,
+            start: 'top 85%'
+          }
+        }
+      );
+    });
+    
+    // Animaciones desde derecha
+    gsap.utils.toArray('.gsap-reveal-right').forEach(element => {
+      gsap.fromTo(element,
+        { opacity: 0, x: 50 },
+        {
+          opacity: 1,
+          x: 0,
+          duration: 0.8,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: element,
+            start: 'top 85%'
+          }
+        }
+      );
+    });
+    
+    // Animaciones de escala
+    gsap.utils.toArray('.gsap-scale').forEach(element => {
+      gsap.fromTo(element,
+        { opacity: 0, scale: 0.8 },
+        {
+          opacity: 1,
+          scale: 1,
+          duration: 0.6,
+          ease: 'back.out(1.7)',
+          scrollTrigger: {
+            trigger: element,
+            start: 'top 85%'
+          }
+        }
+      );
+    });
+    
+    // Contadores animados
+    gsap.utils.toArray('.stat-number').forEach(counter => {
+      const target = parseInt(counter.dataset.target);
+      gsap.fromTo(counter,
+        { textContent: 0 },
+        {
+          textContent: target,
+          duration: 2,
+          ease: 'power1.out',
+          snap: { textContent: 1 },
+          scrollTrigger: {
+            trigger: counter,
+            start: 'top 85%'
+          },
+          onUpdate: function() {
+            counter.textContent = Math.ceil(this.targets()[0].textContent) + (target === 100 ? '%' : target === 24 ? '/7' : '+');
+          }
+        }
+      );
+    });
+    
+    // ===================== TRACKING =====================
+    document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
+      link.addEventListener('click', () => {
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'conversion', {
+            'send_to': 'GA_MEASUREMENT_ID',
+            'event_category': 'WhatsApp',
+            'event_label': 'WhatsApp Click'
+          });
+        }
+        if (typeof fbq !== 'undefined') {
+          fbq('track', 'Contact');
+        }
+      });
+    });
+    
+    document.getElementById('contact-form')?.addEventListener('submit', () => {
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'conversion', {
+          'send_to': 'GA_MEASUREMENT_ID',
+          'event_category': 'Form',
+          'event_label': 'Form Submit'
+        });
+      }
+      if (typeof fbq !== 'undefined') {
+        fbq('track', 'Lead');
+      }
+    });
   </script>
 
 </body>
