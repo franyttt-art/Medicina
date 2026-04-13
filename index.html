@@ -323,6 +323,9 @@
       text-decoration: none;
     }
     .nav-link:hover { color: #f97316; }
+
+    .nav-theme-btn { color: #ffffff; }
+    .navbar-scrolled .nav-theme-btn { color: var(--text-primary); }
     
     .footer {
       background: #000000;
@@ -703,32 +706,43 @@
     
     /* 1. MODO OSCURO TOGGLE */
     .theme-toggle {
-      position: fixed;
-      top: 100px;
-      right: 30px;
-      width: 50px;
-      height: 50px;
-      background: var(--bg-primary);
-      border: 2px solid var(--border-color);
+      width: 36px;
+      height: 36px;
+      background: transparent;
+      border: 1.5px solid currentColor;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
-      z-index: 40;
       transition: all 0.3s ease;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      color: inherit;
+      flex-shrink: 0;
     }
     
     .theme-toggle:hover {
       transform: scale(1.1);
       border-color: #f97316;
+      color: #f97316;
     }
     
     .theme-toggle i {
-      font-size: 1.25rem;
-      color: var(--text-primary);
+      font-size: 0.9rem;
     }
+
+    /* Mejoras de legibilidad en modo oscuro */
+    [data-theme="dark"] .text-gray-900,
+    [data-theme="dark"] .text-gray-800,
+    [data-theme="dark"] .text-gray-700 { color: #f3f4f6 !important; }
+
+    [data-theme="dark"] .text-gray-600,
+    [data-theme="dark"] .text-gray-500 { color: #d1d5db !important; }
+
+    [data-theme="dark"] .text-gray-400 { color: #9ca3af !important; }
+
+    [data-theme="dark"] .mobile-menu a { color: var(--text-primary); }
+    [data-theme="dark"] .testimonial-card { border-color: #374151; }
+    [data-theme="dark"] .testimonials-carousel .testimonial-card { background: #1a1a1a; }
     
     /* 2. STICKY CTA INTELIGENTE */
     .sticky-cta {
@@ -1279,11 +1293,6 @@
 </head>
 <body>
 
-  <!-- TOGGLE MODO OSCURO -->
-  <div class="theme-toggle" onclick="toggleTheme()" title="Cambiar modo claro/oscuro">
-    <i class="fas fa-moon" id="theme-icon"></i>
-  </div>
-
   <!-- NAV -->
   <nav class="navbar" id="navbar">
     <div class="max-w-7xl mx-auto px-6 flex justify-between items-center relative">
@@ -1315,7 +1324,7 @@
         <span class="display font-bold text-xl navbar-logo-text text-white">Zafiro<span class="text-orange-500">Web</span></span>
       </a>
       
-      <div class="hidden md:flex items-center gap-8">
+      <div class="hidden md:flex items-center gap-6">
         <a href="#servicios" class="nav-link">Servicios</a>
         <a href="#beneficios" class="nav-link">Beneficios</a>
         <a href="#portfolio" class="nav-link">Portafolio</a>
@@ -1325,6 +1334,9 @@
           <i class="fab fa-whatsapp"></i>
           Consultar gratis
         </a>
+        <button class="theme-toggle nav-theme-btn" onclick="toggleTheme()" title="Cambiar modo claro/oscuro" aria-label="Cambiar tema">
+          <i class="fas fa-moon" id="theme-icon-desktop"></i>
+        </button>
       </div>
       
       <button class="md:hidden text-white text-2xl" id="mobile-toggle" aria-label="Abrir menú">
@@ -1342,6 +1354,9 @@
         <i class="fab fa-whatsapp"></i>
         Consultar gratis
       </a>
+      <button class="theme-toggle mx-auto mt-4" onclick="toggleTheme()" title="Cambiar modo claro/oscuro" aria-label="Cambiar tema">
+        <i class="fas fa-moon" id="theme-icon-mobile"></i>
+      </button>
     </div>
   </nav>
 
@@ -1516,7 +1531,7 @@
         <div class="card gsap-reveal">
           <div class="icon-box"><i class="fas fa-headset"></i></div>
           <h4 class="font-bold text-lg mb-2">Mantenimiento Mensual</h4>
-          <p class="text-gray-600">Soporte técnico y actualizaciones desde $20-30 USD mensual. Ajustes menores incluidos.</p>
+          <p class="text-gray-600">Soporte técnico y actualizaciones desde $15.000 ARS mensual según el plan elegido.</p>
         </div>
       </div>
     </div>
@@ -1619,7 +1634,7 @@
             <i class="fas fa-headset"></i>
           </div>
           <h4 class="text-xl font-bold text-gray-900 mb-3">Mantenimiento flexible</h4>
-          <p class="text-gray-600">Soporte técnico disponible desde $20-30 USD mensual. Incluye actualizaciones y ajustes.</p>
+          <p class="text-gray-600">Soporte técnico disponible desde $15.000 ARS mensual. Incluye actualizaciones y ajustes.</p>
         </div>
       </div>
     </div>
@@ -2251,9 +2266,9 @@
               </tr>
               <tr>
                 <td>Mantenimiento</td>
-                <td>$20-30 USD/mes</td>
-                <td class="plan-highlight">$20-30 USD/mes</td>
-                <td>6 meses incluidos</td>
+                <td>$15.000 ARS/mes</td>
+                <td class="plan-highlight">$25.000 ARS/mes</td>
+                <td>$30.000 ARS/mes</td>
               </tr>
               <tr>
                 <td class="font-bold">Precio</td>
@@ -2272,8 +2287,8 @@
           <span class="font-bold text-gray-900">Mantenimiento mensual</span>
         </div>
         <p class="text-gray-600">
-          Soporte técnico y actualizaciones: <span class="text-orange-600 font-bold">$20-30 USD</span> mensual 
-          (aproximadamente $28.600-$42.900 ARS)
+          Soporte técnico y actualizaciones según tu plan: 
+          <span class="text-orange-600 font-bold">$15.000 / $25.000 / $30.000 ARS</span> mensual
         </p>
       </div>
     </div>
@@ -2350,7 +2365,7 @@
           <span>¿Qué pasa después de los 30 días de garantía?</span>
           <i class="fas fa-chevron-down"></i>
         </summary>
-        <div>El mantenimiento mensual con soporte técnico y actualizaciones tiene un costo de <strong class="text-orange-600">$20-30 USD</strong> (aproximadamente $28.600-$42.900 ARS según cotización).</div>
+        <div>El mantenimiento mensual con soporte técnico y actualizaciones tiene un costo de <strong class="text-orange-600">$15.000, $25.000 o $30.000 ARS</strong> según el plan contratado.</div>
       </details>
       
       <details class="gsap-reveal">
@@ -2640,28 +2655,32 @@
     // ===================== MODO OSCURO =====================
     function toggleTheme() {
       const html = document.documentElement;
-      const icon = document.getElementById('theme-icon');
+      const icons = document.querySelectorAll('[id^="theme-icon"]');
       const currentTheme = html.getAttribute('data-theme');
       const newTheme = currentTheme === 'light' ? 'dark' : 'light';
       
       html.setAttribute('data-theme', newTheme);
       localStorage.setItem('theme', newTheme);
       
-      if (newTheme === 'dark') {
-        icon.classList.remove('fa-moon');
-        icon.classList.add('fa-sun');
-      } else {
-        icon.classList.remove('fa-sun');
-        icon.classList.add('fa-moon');
-      }
+      icons.forEach(icon => {
+        if (newTheme === 'dark') {
+          icon.classList.remove('fa-moon');
+          icon.classList.add('fa-sun');
+        } else {
+          icon.classList.remove('fa-sun');
+          icon.classList.add('fa-moon');
+        }
+      });
     }
     
     // Restaurar tema guardado
     const savedTheme = localStorage.getItem('theme') || 'light';
     document.documentElement.setAttribute('data-theme', savedTheme);
     if (savedTheme === 'dark') {
-      document.getElementById('theme-icon').classList.remove('fa-moon');
-      document.getElementById('theme-icon').classList.add('fa-sun');
+      document.querySelectorAll('[id^="theme-icon"]').forEach(icon => {
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+      });
     }
 
     // ===================== NAVBAR SCROLL =====================
@@ -2979,7 +2998,7 @@ PLANES DISPONIBLES:
    - WhatsApp API
    - 6 meses sin costo de mantenimiento
 
-MANTENIMIENTO MENSUAL: $20-30 USD (soporte + actualizaciones)
+MANTENIMIENTO MENSUAL: $15.000 / $25.000 / $30.000 ARS según plan
 
 Contacto:
 WhatsApp: +54 9 260 432-3056
